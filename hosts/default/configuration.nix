@@ -153,5 +153,6 @@ hardware.nvidia.open = true;  # see the note above
 services.gnome.gnome-keyring.enable = true;
 security.pam.services.login.enableGnomeKeyring = true;
 
+security.sudo.wheelNeedsPassword = false;
 
 }
