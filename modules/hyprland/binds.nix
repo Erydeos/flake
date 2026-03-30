@@ -77,7 +77,7 @@
   "$mainMod, m, togglespecialworkspace, music"
   "$mainMod SHIFT, m, movetoworkspace, special:music"
 
-  "$mainMod SHIFT, m, movetoworkspace, special:music"
+  "$mainMod SHIFT, n, exec, obsidian"
   "$mainMod, n, togglespecialworkspace, notes"
 
 # Scroll through existing workspaces with mainMod + scroll
