@@ -85,6 +85,9 @@
   quickshell
   git
   gh
+  obsidian
+  hyprlock
+  hypridle
 
   usbutils
   unzip
