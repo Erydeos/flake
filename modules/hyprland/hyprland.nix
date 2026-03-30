@@ -7,6 +7,8 @@
     ./monitors.nix
     ./hyprpaper.nix
     ./decoration.nix
+    ./hyprlock.nix
+    ./hypridle.nix
   ];
 
   wayland.windowManager.hyprland = {
@@ -16,7 +18,6 @@
       
       exec-once = [
         "waybar"
-        "hyprpaper"
         "sleep 1 && xrandr --output DP-1 --primary"
         "[workspace special:music silent] ytmdesktop --password-store='gnome-libsecret' --no-sandbox &"
         "[workspace special:notes silent] obsidian"

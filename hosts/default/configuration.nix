@@ -89,10 +89,14 @@
   hyprlock
   hypridle
 
+  steam
+  discord
+
   usbutils
   unzip
   pciutils
   wl-clipboard
+  psmisc
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -137,12 +141,17 @@ services.pulseaudio.package = pkgs.pulseaudioFull;
 services.pipewire.enable = false;
 
 # GPU drivers
-hardware.graphics.enable = true;
+hardware.graphics = {
+  enable = true;
+  enable32Bit = true; # Required for Steam
+};
+
 services.xserver.videoDrivers = [ "nvidia" ];
 hardware.nvidia.open = true;  # see the note above
 
 # Secure Storage for ytmdesktop
 services.gnome.gnome-keyring.enable = true;
 security.pam.services.login.enableGnomeKeyring = true;
+
 
 }

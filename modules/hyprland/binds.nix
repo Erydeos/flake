@@ -22,10 +22,12 @@
        bind = [
  "$mainMod, Q, exec, $terminal"
  "$mainMod, C, killactive,"
- "$mainMod, delete, exec, sudo shutdown now"
+ "$mainMod, delete, exec, push-flake && \sudo shutdown now"
  "$mainMod, E, exec, $fileManager"
  "$mainMod, V, togglefloating,"
  "$mainMod, R, exec, pgrep wofi >/dev/null 2>&1 && killall wofi || $menu"
+
+ "$mainMod SHIFT, f, fullscreen"
 
  "$mainMod, P, pseudo," # dwindle
  "$mainMod, J, layoutmsg, togglesplit" # dwindle
@@ -39,6 +41,7 @@
  "$mainMod, y, exec, ytmdesktop --password-store='gnome-libsecret' --no-sandbox &"
 
  "$mainMod, b, exec, /home/elliot/.config/waybar/scripts/launch.sh"
+ "$mainMod, l, exec, hyprlock"
 
 
 #-------------------------------------------------------
@@ -77,8 +80,15 @@
   "$mainMod, m, togglespecialworkspace, music"
   "$mainMod SHIFT, m, movetoworkspace, special:music"
 
+  "$mainMod, g, exec, steam"
+  "$mainMod, d, exec, discord"
+  "$mainMod, s, togglespecialworkspace, steam"
+  "$mainMod SHIFT, s, movetoworkspace, special:steam"
+
   "$mainMod SHIFT, n, exec, obsidian"
   "$mainMod, n, togglespecialworkspace, notes"
+
+  "bind = $mainMod, k, exec, hyprctl kill"
 
 # Scroll through existing workspaces with mainMod + scroll
   "$mainMod, mouse_down, workspace, e+1"
