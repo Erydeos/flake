@@ -84,6 +84,7 @@
   hyprshutdown
   quickshell
   git
+  gh
 
   usbutils
   unzip
