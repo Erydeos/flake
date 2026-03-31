@@ -88,8 +88,7 @@
   obsidian
   hyprlock
   hypridle
-
-  steam
+  
   discord
 
   usbutils
@@ -163,5 +162,14 @@ fonts.packages = with pkgs; [
     ipafont 
     kochi-substitute
   ];
+
+programs.steam = {
+  enable = true;
+  extraCompatPackages = with pkgs; [
+    proton-ge-bin
+  ];
+};
+
+nix.settings.download-buffer-size = 1073741824; # 1GB
 
 }
