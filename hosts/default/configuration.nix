@@ -95,7 +95,7 @@
   unzip
   pciutils
   wl-clipboard
-  psmisc
+  pavucontrol
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -134,10 +134,15 @@ hardware.enableRedistributableFirmware = true;
 
 
 # Audio
-services.pulseaudio.enable = true;
-services.pulseaudio.support32Bit = true;
-services.pulseaudio.package = pkgs.pulseaudioFull;
-services.pipewire.enable = false;
+security.rtkit.enable = true;
+
+services.pipewire = {
+  enable = true;
+  alsa.enable = true;
+  alsa.support32Bit = true;
+  pulse.enable = true;
+  jack.enable = true;
+};
 
 # GPU drivers
 hardware.graphics = {
