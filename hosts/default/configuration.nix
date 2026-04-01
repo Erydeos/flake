@@ -166,6 +166,9 @@ fonts.packages = with pkgs; [
     noto-fonts-color-emoji
     ipafont 
     kochi-substitute
+    font-awesome      # Standard for many Waybar configs
+    nerd-fonts.symbols-only # Recommended for general icon support
+    nerd-fonts.jetbrains-mono # A popular choice for powerline icons
   ];
 
 programs.steam = {
