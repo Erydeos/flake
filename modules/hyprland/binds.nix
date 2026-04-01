@@ -22,7 +22,7 @@
        bind = [
  "$mainMod, Q, exec, $terminal"
  "$mainMod, C, killactive,"
- "$mainMod, delete, exec, cd /home/elliot/nixos/ && \git add . &&\git commit -m update && \git push origin main && \sudo systemctl shutdown now"
+ "$mainMod, delete, exec, cd /home/elliot/nixos/ && \git add . &&\git commit -m update && \git push origin main && \shutdown now"
  "$mainMod, E, exec, $fileManager"
  "$mainMod, V, togglefloating,"
  "$mainMod, R, exec, pgrep wofi >/dev/null 2>&1 && pkill -9 wofi || $menu"
