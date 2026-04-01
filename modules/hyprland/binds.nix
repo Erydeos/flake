@@ -25,7 +25,7 @@
  "$mainMod, delete, exec, push-flake && \sudo shutdown now"
  "$mainMod, E, exec, $fileManager"
  "$mainMod, V, togglefloating,"
- "$mainMod, R, exec, pgrep wofi >/dev/null 2>&1 && killall wofi || $menu"
+ "$mainMod, R, exec, pgrep wofi >/dev/null 2>&1 && pkill -9 wofi || $menu"
 
  "$mainMod SHIFT, f, fullscreen"
 
