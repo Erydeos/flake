@@ -18,10 +18,12 @@
   networking.hostName = "nixos"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
+
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Enable networking
   networking.networkmanager.enable = true;
+
 
   # Set your time zone.
   time.timeZone = "Europe/Stockholm";
@@ -180,5 +182,7 @@ programs.steam = {
 
 nix.settings.download-buffer-size = 1073741824; # 1GB
 programs.gamescope.enable = true;
+
+
 
 }
