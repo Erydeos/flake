@@ -10,14 +10,7 @@
         "DP-2,2560x1440@59.95,3840x1440,1.0"
       ];
 
-    workspace = [
-      "1, monitor:DP-1, persistent:true"
-      "2, monitor:DP-1, persistent:true"
-      "3, monitor:DP-1, persistent:true"
-      "4, monitor:DP-1, persistent:true"
-      "5, monitor:DP-1, persistent:true"
-    
-    ];
+    #workspace = [];
 
     };
   };
