@@ -98,8 +98,11 @@
   pciutils
   wl-clipboard
   pavucontrol
+  home-manager
 
   inputs.quickshell.packages.${pkgs.system}.default
+  kdePackages.qt5compat
+  libsForQt5.qt5.qtmultimedia
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

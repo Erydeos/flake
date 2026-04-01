@@ -9,6 +9,7 @@
   imports = [
     /home/elliot/nixos/modules/hyprland/hyprland.nix
     /home/elliot/nixos/modules/applications/kitty.nix
+    /home/elliot/nixos/modules/quickshell/quickshell.nix
   ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -18,6 +19,7 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "25.11"; # Please read the comment before changing.
+
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -83,7 +85,10 @@
     shellAliases = {
       pf = "cd /home/elliot/nixos/ && \git add . &&\git commit -m update && \git push origin main";
       rf = "sudo nixos-rebuild switch --flake /home/elliot/nixos#default --impure";
+      qs = "quickshell";
     };
 
   };
+
+
 }

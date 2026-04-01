@@ -43,6 +43,8 @@
  "$mainMod, b, exec, /home/elliot/.config/waybar/scripts/launch.sh"
  "$mainMod, l, exec, hyprlock"
 
+ "$mainMod, u, exec, pgrep quickshell >/dev/null 2>&1 && pkill -9 quickshell || quickshell"
+
 
 #-------------------------------------------------------
 
