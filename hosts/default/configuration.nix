@@ -179,5 +179,6 @@ programs.steam = {
 };
 
 nix.settings.download-buffer-size = 1073741824; # 1GB
+programs.gamescope.enable = true;
 
 }

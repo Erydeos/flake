@@ -10,7 +10,11 @@
         "DP-2,2560x1440@59.95,3840x1440,1.0"
       ];
 
-    #workspace = [];
+    workspace = [
+      "1, monitor:DP-1"
+      "2, monitor:DP-1"
+      "3, monitor:DP-1"
+      ];
 
     };
   };

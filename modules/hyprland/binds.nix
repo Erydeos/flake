@@ -29,7 +29,7 @@
 
  "$mainMod SHIFT, f, fullscreen"
 
- "$mainMod, P, pseudo," # dwindle
+ "$mainMod, P, exec, hyprctl dispatch exit"
  "$mainMod, J, layoutmsg, togglesplit" # dwindle
 
 
