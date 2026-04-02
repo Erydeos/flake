@@ -11,9 +11,11 @@
       ];
 
     workspace = [
-      "1, monitor:DP-1"
-      "2, monitor:DP-1"
-      "3, monitor:DP-1"
+      "1, monitor:DP-1, persistent:true"
+      "2, monitor:DP-1, persistent:true"
+      "3, monitor:DP-1, persistent:true"
+      "4, monitor:DP-1, persistent:true"
+      "5, monitor:DP-1, persistent:true"
       ];
 
     };
