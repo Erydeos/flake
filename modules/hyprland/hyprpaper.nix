@@ -5,6 +5,7 @@
   services.hyprpaper = {
     enable = true;
     settings = {
+      splash = false;
       wallpaper = [{
       monitor = "DP-1";
       path = "/home/elliot/images/hyprland-anime.png";

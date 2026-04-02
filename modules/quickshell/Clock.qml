@@ -15,7 +15,7 @@ import Quickshell.Io
         }
 
         implicitHeight: 34
-        implicitWidth: 300
+        implicitWidth: 400
 
         color: "#121212"
         radius: 20

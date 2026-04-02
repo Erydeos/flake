@@ -15,7 +15,6 @@
     enable = true;
 
     settings = {
-      
       exec-once = [
 
         "sleep 1 && xrandr --output DP-1 --primary"
@@ -23,10 +22,6 @@
         "[workspace special:notes silent] obsidian"
         "quickshell"
       ];
-
-      exec = [
-      ];
-
     };
   };
 
