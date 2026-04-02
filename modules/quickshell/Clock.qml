@@ -1,38 +1,45 @@
-import Quickshell
 import QtQuick
+import QtQuick.Layouts
+import Quickshell
 import Quickshell.Io
 
-PanelWindow {
-    anchors {
-        top: true
-        right: true
-    }
 
-    implicitHeight: 30
 
-    Text {
-        id: clock
-        anchors.centerIn: parent
+    Rectangle {
+        anchors {
+        right: parent.right
+        top: parent.top
+        bottom: parent.bottom
 
-        Process {
-            id: dateProc
+        rightMargin: 50
+        }
 
-            command: ["date"]
-            running:true
+        implicitHeight: 34
+        implicitWidth: 300
+
+        color: "#121212"
+        radius: 20
+
+        RowLayout {
+            anchors.fill: parent
+            spacing: 10
             
-            stdout: StdioCollector {
-                onStreamFinished: clock.text = this.text
+            Rectangle {
+                anchors.centerIn: parent
+
+                implicitHeight: 30
+
+                Text {
+                    id: clock
+                    anchors.centerIn: parent
+                    text: root.time
+                    
+                    color: "white"
+                    font.pixelSize: 18
+                    font.family: "Maple Mono"
+                    font.bold: true
+                }
             }
         }
     }
 
-    Timer {
-        interval: 1000
-         
-        running: true
-
-        repeat: true
-
-        onTriggered: dateProc.running = true
-    }
-}
