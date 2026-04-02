@@ -132,19 +132,9 @@
 
                     Hyprland.dispatch(`togglespecialworkspace ${name}`);
                   }
-
-
                 }
               }
-
-
-
-
-
-
             }
-
-
           }
         }
       }
