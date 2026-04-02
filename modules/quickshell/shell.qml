@@ -91,47 +91,42 @@
             }
           }
 
-          Row {
-            spacing: 5
-            anchors.horizontalCenter: parent
+          Repeater {
+            model: Hyprland.workspaces.values.filter(ws => ws.id < 0)
 
-            Repeater {
-              model: Hyprland.workspaces.values.filter(ws => ws.id < 0)
+            Rectangle {
+              readonly property var ws: modelData
 
-              Rectangle {
-                readonly property var ws: modelData
+              implicitHeight: window.height
+              implicitWidth: window.specialWidth
 
-                implicitHeight: window.height
-                implicitWidth: window.specialWidth
+              radius: 25
 
-                radius: 25
-
-                readonly property bool isActive: Hyprland.focusedWorkspace?.id === ws.id
+              readonly property bool isActive: Hyprland.focusedWorkspace?.id === ws.id
 
 
-                color: {
-                if (isActive) return "#3a3a3a"
-                if (mouseArea.containsMouse) return "#3a3a3a"
-                return "transparent"
-                }
+              color: {
+              if (isActive) return "#3a3a3a"
+              if (mouseArea.containsMouse) return "#3a3a3a"
+              return "transparent"
+              }
 
-                Text {
-                  anchors.centerIn: parent
-                  text: ws.name.replace("special:", "").substring(0, 5)
-                  font.pixelSize: 18
-                  font.bold: true
-                  color: "white"
-                }
+              Text {
+                anchors.centerIn: parent
+                text: ws.name.replace("special:", "").substring(0, 5)
+                font.pixelSize: 18
+                font.bold: true
+                color: "white"
+              }
 
-                MouseArea {
-                  id: mouseArea
-                  anchors.fill: parent
-                  hoverEnabled: true
-                  onClicked: {
-                    let name = ws.name.replace("special:", "")
+              MouseArea {
+                id: mouseArea
+                anchors.fill: parent
+                hoverEnabled: true
+                onClicked: {
+                  let name = ws.name.replace("special:", "")
 
-                    Hyprland.dispatch(`togglespecialworkspace ${name}`);
-                  }
+                  Hyprland.dispatch(`togglespecialworkspace ${name}`);
                 }
               }
             }
