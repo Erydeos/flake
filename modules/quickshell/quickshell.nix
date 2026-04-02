@@ -1,7 +1,7 @@
 { config, pkgs, lib, inputs, ... }:
 
 {
-
+  qt.enable = true;
   programs.quickshell = {
     enable = true;
   };
