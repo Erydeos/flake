@@ -42,7 +42,7 @@
         HyprlandWindow.opacity: 0.8
 
         color: "transparent"
-
+        Audio {}
         Systemtray {}
         Workspaces {}
         Clock {

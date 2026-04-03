@@ -14,16 +14,17 @@ import Quickshell.Io
         top: parent.top
         bottom: parent.bottom
 
-        rightMargin: 50
+        rightMargin: 100
         }
 
         implicitHeight: 34
-        implicitWidth: 400
+        implicitWidth: 250
 
         color: "#121212"
         radius: 20
 
         RowLayout {
+            id: row
             anchors.fill: parent
             spacing: 10
             
