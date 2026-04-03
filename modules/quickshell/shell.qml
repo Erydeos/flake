@@ -10,8 +10,6 @@
       id: root
 
       Time { id: timeSource }
-
-      property string time
       
       PanelWindow {
         id: bar
@@ -46,5 +44,7 @@
           time: timeSource.time
         }
       }
+
+
     }
   }
