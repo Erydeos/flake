@@ -35,7 +35,7 @@ Rectangle {
 
         Text {
             anchors.centerIn: parent
-            text: "Audio"
+            text: "Audio "
             color: "white"
             font.pixelSize: 18
             font.family: "Maple Mono"
