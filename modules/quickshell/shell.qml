@@ -4,8 +4,13 @@
   import Quickshell.Wayland
   import Quickshell.Hyprland
   import Quickshell.Io
+  import Quickshell.Services.SystemTray
+
 
   ShellRoot {
+    Component.onCompleted: {
+        console.log("SystemTray is active. Current items:", SystemTray.items.length)
+    }
     Scope {
       id: root
 
@@ -38,7 +43,7 @@
 
         color: "transparent"
 
-
+        Systemtray {}
         Workspaces {}
         Clock {
           time: timeSource.time
