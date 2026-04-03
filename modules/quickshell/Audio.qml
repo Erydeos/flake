@@ -9,7 +9,7 @@ Rectangle {
     top: parent.top
     bottom: parent.bottom
 
-    leftMargin: 100
+    leftMargin: 150
     }
 
   implicitHeight: 34
