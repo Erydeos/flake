@@ -13,7 +13,7 @@ Rectangle {
     }
 
   implicitHeight: 34
-  implicitWidth: row.width + 30
+  implicitWidth: 150
 
   color: "#121212"
   radius: 20
