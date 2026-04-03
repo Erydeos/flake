@@ -12,7 +12,7 @@ Scope {
         running: true
 
         stdout: StdioCollector {
-        onStreamFinished: root.time = this.text
+        onStreamFinished: timeRoot.time = this.text
         }
     }
 

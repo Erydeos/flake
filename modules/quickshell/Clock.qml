@@ -6,6 +6,9 @@ import Quickshell.Io
 
 
     Rectangle {
+        id: clockRoot
+        required property string time
+
         anchors {
         right: parent.right
         top: parent.top
@@ -30,9 +33,11 @@ import Quickshell.Io
                 implicitHeight: 30
 
                 Text {
+
+                    
                     id: clock
                     anchors.centerIn: parent
-                    text: root.time
+                    text: clockRoot.time
                     
                     color: "white"
                     font.pixelSize: 18

@@ -9,7 +9,10 @@
     Scope {
       id: root
 
+      Time { id: timeSource }
+
       property string time
+      
       PanelWindow {
         id: bar
         anchors {
@@ -39,29 +42,9 @@
 
 
         Workspaces {}
-        Clock {}
-      }
-
-      Process {
-        id: dateProc
-
-        command: ["date"]
-        running:true
-        
-        stdout: StdioCollector {
-            onStreamFinished: root.time = this.text
+        Clock {
+          time: timeSource.time
         }
       }
-
-      Timer {
-        interval: 1000
-        
-        running: true
-
-        repeat: true
-
-        onTriggered: dateProc.running = true
-      }
-
     }
   }
