@@ -13,7 +13,7 @@ Rectangle {
     }
 
   implicitHeight: 34
-  implicitWidth: 150
+  implicitWidth: row.width + 5
 
   color: "#121212"
   radius: 20
@@ -21,17 +21,19 @@ Rectangle {
   RowLayout {
     id: row
     anchors {
-      fill: parent
+      centerIn: parent
       leftMargin: 10
     }
     spacing: 5
+    width: childrenRect.width
+    implicitHeight: parent.height
 
     Repeater {
       model: SystemTray.items
 
       delegate: Item {
-        height: 34
-        width: 30
+        height: parent.height
+        width: height
 
         Image {
           anchors.fill: parent
