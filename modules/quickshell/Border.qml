@@ -13,7 +13,8 @@ PanelWindow {
     }
 
     // Corrected attached property and click-through logic
-    WlrLayershell.layer: WlrLayer.Overlay
+    aboveWindows: true
+    
     
     // Use Xor to make the borderRect NOT clickable
     mask: Region { 
@@ -28,7 +29,7 @@ PanelWindow {
         
         // Your curved border settings
         border.color: "black" 
-        border.width: 10 
+        border.width: 40 
         radius: 25 
         antialiasing: true
         
