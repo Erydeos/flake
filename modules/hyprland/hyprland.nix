@@ -20,6 +20,7 @@
         "sleep 1 && xrandr --output DP-1 --primary"
         "[workspace special:music silent] ytmdesktop --password-store='gnome-libsecret' --no-sandbox &"
         "[workspace special:notes silent] obsidian"
+        "hyprctl dispatch workspace 1"
         "quickshell"
       ];
     };
