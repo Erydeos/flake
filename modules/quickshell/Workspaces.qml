@@ -7,15 +7,18 @@
   Rectangle {
     anchors.centerIn: parent
     implicitHeight: bar.height
-    implicitWidth: bar.width
+    implicitWidth: row.width
     
     color: "#121212"
     radius: 20
 
 
     RowLayout {
-      anchors.fill: parent
+      id: row
+      anchors.centerIn: parent
       spacing: bar.spacer
+      width: childrenRect.width
+      height: parent.height
 
       Repeater {
         model: 5
@@ -73,8 +76,8 @@
         Rectangle {
           readonly property var ws: modelData
 
-          implicitHeight: bar.height
-          implicitWidth: bar.specialWidth
+          implicitHeight: parent.height
+          implicitWidth: 70
 
           radius: 25
 
