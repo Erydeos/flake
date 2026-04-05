@@ -22,16 +22,15 @@ ShellRoot {
         right: true
         left: true
       }
-      
-      exclusionMode: ExclusionMode.Ignore
-      aboveWindows: true
 
       readonly property int height: 34
       readonly property int spacer: 5
 
       implicitHeight: height
 
-
+      margins {
+        bottom: 5
+      }
 
       HyprlandWindow.opacity: 0.8
 
