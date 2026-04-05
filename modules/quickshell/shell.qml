@@ -8,9 +8,6 @@ import Quickshell.Services.SystemTray
 
 
 ShellRoot {
-  Component.onCompleted: {
-      console.log("SystemTray is active. Current items:", SystemTray.items.length)
-  }
   Scope {
     id: root
 
