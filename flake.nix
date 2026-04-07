@@ -25,6 +25,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    linux-wallpaper-engine = {
+      url = "github:jagrat7/linux-wallpaper-engine";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = { self, nixpkgs, ...}@inputs:
