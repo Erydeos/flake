@@ -92,6 +92,7 @@
   hypridle
   linux-wallpaperengine
   inputs.linux-wallpaper-engine.packages.${pkgs.stdenv.hostPlatform.system}.default
+  hyprpicker
   
   discord
 
