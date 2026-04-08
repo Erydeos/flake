@@ -10,6 +10,9 @@
     /home/elliot/nixos/modules/hyprland/hyprland.nix
     /home/elliot/nixos/modules/applications/kitty.nix
     /home/elliot/nixos/modules/quickshell/quickshell.nix
+    /home/elliot/nixos/modules/applications/matugen.nix
+
+    inputs.matugen.nixosModules.default
   ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release

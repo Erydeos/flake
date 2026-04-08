@@ -24,6 +24,7 @@
         "[workspace special:notes silent] obsidian"
 
       ];
+
     };
   };
 

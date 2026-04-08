@@ -93,6 +93,7 @@
   linux-wallpaperengine
   inputs.linux-wallpaper-engine.packages.${pkgs.stdenv.hostPlatform.system}.default
   hyprpicker
+  inputs.matugen.packages.${system}.default
   
   discord
 

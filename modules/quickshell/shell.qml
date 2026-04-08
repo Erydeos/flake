@@ -17,6 +17,11 @@ ShellRoot {
 
     PanelWindow {
       id: bar
+
+      surfaceFormat {
+        opaque: false
+      }
+
       anchors {
         top: true
         right: true
@@ -32,9 +37,8 @@ ShellRoot {
         bottom: 5
       }
 
-      HyprlandWindow.opacity: 0.8
-
       color: "transparent"
+
       Audio {}
       Systemtray {}
       Workspaces {}

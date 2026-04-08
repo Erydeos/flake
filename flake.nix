@@ -30,6 +30,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    matugen = {
+      url = "github:/InioX/Matugen";
+    };
+
   };
 
   outputs = { self, nixpkgs, ...}@inputs:
