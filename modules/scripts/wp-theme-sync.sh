@@ -10,11 +10,16 @@ if [ -z "$WP_ID" ]; then
 fi
 
 # 3. Path to the preview image
-PREVIEW_PATH="$WORKSHOP_DIR/$WP_ID/preview.gif"
+PREVIEW_PATH_1="$WORKSHOP_DIR/$WP_ID/preview.gif"
+PREVIEW_PATH_2="$WORKSHOP_DIR/$WP_ID/preview.jpg"
 
-if [ -f "$PREVIEW_PATH" ]; then
+if [ -f "$PREVIEW_PATH_1" ]; then
     echo "Updating theme with preview for ID: $WP_ID"
-    matugen image "$PREVIEW_PATH"
+    matugen image "$PREVIEW_PATH_1"
+
+elif [-f "$PREVIEW_PATH_2"]; then
+    echo "Updating theme with preview for ID: $WP_ID"
+    matugen image "$PREVIEW_PATH_2"
 else
     echo "Preview image not found at $PREVIEW_PATH"
     # Fallback: take a live screenshot of the screen (requires grim for Wayland)
