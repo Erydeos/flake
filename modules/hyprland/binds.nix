@@ -49,6 +49,8 @@
 
  "$mainMod, escape, exec, hyprshutdown"
 
+ "$mainMod, w, exec, linux-wallpaper-engine"
+
 #-------------------------------------------------------
 
 # Move focus with mainMod + arrow keys
