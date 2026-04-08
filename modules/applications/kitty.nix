@@ -37,5 +37,9 @@
     in
       (builtins.concatStringsSep "," mappings) + " Symbols Nerd Font";
     };
+
+    extraConfig = ''
+      include ./colors.conf
+    '';
   };
 }

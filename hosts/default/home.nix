@@ -94,5 +94,13 @@
 
   };
 
+  gtk = {
+    gtk4.theme = null;
+    enable = true;
+    gtk3.extraCss = "@import url('colors.css');";
+    gtk4.extraCss = "@import url('colors.css');";
+
+  };
+
 
 }
