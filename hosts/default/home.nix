@@ -91,8 +91,5 @@
       qs = "quickshell";
       ut = "/home/elliot/nixos/modules/scripts/wp-theme-sync.sh";
     };
-
   };
-
-
 }
