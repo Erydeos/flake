@@ -20,7 +20,7 @@ import Quickshell.Io
         implicitHeight: 34
         implicitWidth: 250
 
-        color: "#121212"
+        color: Colors.bg
         radius: 20
 
         RowLayout {
@@ -40,7 +40,7 @@ import Quickshell.Io
                     anchors.centerIn: parent
                     text: clockRoot.time
                     
-                    color: "white"
+                    color: Colors.text
                     font.pixelSize: 18
                     font.family: "Maple Mono"
                     font.bold: true

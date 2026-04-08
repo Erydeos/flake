@@ -15,7 +15,7 @@ Rectangle {
   implicitHeight: 34
   implicitWidth: 100
 
-  color: "#121212"
+  color: Colors.bg
   radius: 20
 
 
@@ -29,14 +29,14 @@ Rectangle {
 
 
         color: {
-            if (mouseArea.containsMouse) return "#3a3a3a"
+            if (mouseArea.containsMouse) return Colors.ac
             return "transparent"
         }
 
         Text {
             anchors.centerIn: parent
             text: "Audio "
-            color: "white"
+            color: Colors.text
             font.pixelSize: 18
             font.family: "Maple Mono"
             font.bold: true

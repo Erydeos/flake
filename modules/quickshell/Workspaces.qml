@@ -9,7 +9,7 @@
     implicitHeight: bar.height
     implicitWidth: row.width
     
-    color: "#121212"
+    color: Colors.bg
     radius: 20
 
 
@@ -36,8 +36,8 @@
           property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
 
           color: {
-            if (isActive) return "#3a3a3a"
-            if (mouseArea.containsMouse) return "#3a3a3a"
+            if (isActive) return Colors.ac
+            if (mouseArea.containsMouse) return Colors.ac
             return "transparent"
           }
 
@@ -46,7 +46,7 @@
 
 
             text: index + 1
-            color: "white"
+            color: Colors.text
             font.pixelSize: 18
             font.family: "Maple Mono"
             font.bold: true
@@ -85,8 +85,8 @@
 
 
           color: {
-          if (isActive) return "#3a3a3a"
-          if (mouseArea.containsMouse) return "#3a3a3a"
+          if (isActive) return Colors.ac
+          if (mouseArea.containsMouse) return Colors.ac
           return "transparent"
           }
 
@@ -95,7 +95,7 @@
             text: ws.name.replace("special:", "").substring(0, 5)
             font.pixelSize: 18
             font.bold: true
-            color: "white"
+            color: Colors.text
           }
 
           MouseArea {

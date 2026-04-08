@@ -29,7 +29,7 @@
 
  "$mainMod SHIFT, f, fullscreen"
 
- "$mainMod, P, exec, hyprpicker"
+
  "$mainMod, J, layoutmsg, togglesplit" # dwindle
 
 
@@ -44,6 +44,8 @@
  "$mainMod, l, exec, hyprlock"
 
  "$mainMod, u, exec, pgrep quickshell >/dev/null 2>&1 && pkill -9 quickshell || quickshell"
+
+ "$mainMod, P, exec, hyprpicker -a"
 
  "$mainMod, escape, exec, hyprshutdown"
 
