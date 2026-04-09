@@ -29,7 +29,7 @@ import Quickshell.Io
             spacing: 10
             
             Rectangle {
-                anchors.centerIn: parent
+                Layout.alignment: Qt.AlignCenter
 
                 implicitHeight: 30
 

@@ -6,8 +6,13 @@ Scope {
 
   Process {
     id: themePicker
-    command: ["sh", "-c", "ut"]
-    running: true
+    command: ["sh", "-c", "/home/elliot/nixos/modules/scripts/wp-theme-sync.sh"]
+    
+    onExited: (exitCode) => {
+        if (exitCode === 0) {
+            Quickshell.reload(true);
+        } 
+    }
   }
 
   Timer {

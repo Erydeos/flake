@@ -25,7 +25,7 @@ Rectangle {
       leftMargin: 10
     }
     spacing: 5
-    width: childrenRect.width
+    implicitWidth: childrenRect.width
     implicitHeight: parent.height
 
     Repeater {

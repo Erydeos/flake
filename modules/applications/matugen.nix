@@ -7,7 +7,7 @@
 
     [templates.quickshell]
     input_path = "${config.xdg.configHome}/matugen/templates/colors.qml"
-    output_path = "/home/elliot/nixos/modules/quickshell/Matugen.qml"
+    output_path = "${config.xdg.configHome}/matugen/templates/colors_new.qml"
     
   '';
 
