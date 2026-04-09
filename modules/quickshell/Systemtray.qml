@@ -15,7 +15,7 @@ Rectangle {
   implicitHeight: 34
   implicitWidth: row.width + 5
 
-  color: "#121212"
+  color: Colors.bg
   radius: 20
 
   RowLayout {

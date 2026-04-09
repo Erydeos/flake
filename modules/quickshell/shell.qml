@@ -13,7 +13,7 @@ ShellRoot {
 
     Time { id: timeSource }
 
-    //Border {}
+    Theme {}
 
     PanelWindow {
       id: bar

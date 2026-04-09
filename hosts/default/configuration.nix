@@ -99,6 +99,7 @@
 
   usbutils
   unzip
+  unrar
   pciutils
   wl-clipboard
   pavucontrol
