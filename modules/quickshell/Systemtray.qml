@@ -41,6 +41,7 @@ Rectangle {
           fillMode: Image.PreserveAspectFit
         }
       }
+
     }
   }
 }

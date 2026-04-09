@@ -15,16 +15,21 @@ PREVIEW_PATH_2="$WORKSHOP_DIR/$WP_ID/preview.jpg"
 
 if [ -f "$PREVIEW_PATH_1" ]; then
     echo "Updating theme with preview for ID: $WP_ID"
-    matugen image "$PREVIEW_PATH_1" --prefer=saturation
+    matugen -v image "$PREVIEW_PATH_1" --prefer=saturation
     if ! cmp -s /home/elliot/.config/matugen/templates/colors_new.qml /home/elliot/nixos/modules/quickshell/Matugen.qml; then \
             mv /home/elliot/.config/matugen/templates/colors_new.qml /home/elliot/nixos/modules/quickshell/Matugen.qml && exit 0; \
             else \
             exit 1; \
             fi
 
-elif [-f "$PREVIEW_PATH_2"]; then
+elif [ -f "$PREVIEW_PATH_2" ]; then
     echo "Updating theme with preview for ID: $WP_ID"
-    matugen image "$PREVIEW_PATH_2"
+    matugen -v image "$PREVIEW_PATH_2" --prefer=saturation
+    if ! cmp -s /home/elliot/.config/matugen/templates/colors_new.qml /home/elliot/nixos/modules/quickshell/Matugen.qml; then \
+        mv /home/elliot/.config/matugen/templates/colors_new.qml /home/elliot/nixos/modules/quickshell/Matugen.qml && exit 0; \
+        else \
+        exit 1; \
+        fi
 else
     echo "Preview image not found at $PREVIEW_PATH"
     # Fallback: take a live screenshot of the screen (requires grim for Wayland)

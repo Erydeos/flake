@@ -3,7 +3,9 @@
 {
   xdg.configFile."matugen/config.toml".text = ''
     [config]
+    fallback_color = "#121212"
     json_format = "hex"
+
 
     [templates.quickshell]
     input_path = "${config.xdg.configHome}/matugen/templates/colors.qml"
