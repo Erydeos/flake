@@ -15,7 +15,7 @@
     };
 
       "$terminal" = "kitty";
-      "$fileManager" = "nemo";
+      "$fileManager" = "kitty -e yazi";
       "$menu" = "wofi --show drun";
 
       "$mainMod" = "alt";
