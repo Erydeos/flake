@@ -36,16 +36,11 @@
       };
 
       opener = {
-        codium = [{ 
-          run = ''codium "$@"'';
-          detach = true; 
-          desc = "VSCodium"; }];
         edit = [
           { 
-            run = "${EDITOR:-vi} %s"; 
-            desc = "$EDITOR";      
-            for = "unix"; 
-            block = true; 
+            run = ''codium "$@"''; 
+            detach = true; 
+            desc = "VSCodium"; 
           }
 
           { 
@@ -195,29 +190,56 @@
 
       open = {
         rules = [
-    # Open all text files and JSONs with VSCodium
+          # Folder
+          { 
+            url = "*/"; 
+            use = [ "edit" "open" "reveal" ]; 
+          }
+          # Text
           { 
             mime = "text/*"; 
-            use = "codium"; 
+            use = [ "edit" "reveal" ]; 
           }
-
+          # Image
           { 
-            mime = "application/json"; 
-            use = "codium"; 
+            mime = "image/*"; 
+            use = [ "open" "reveal" ];
           }
-
-          # Open specific extensions like .py or .js
+          # Media
           { 
-            name = "*.{py,js,ts,md,toml,yaml}"; 
-            use = "codium"; 
+            mime = "{audiovideo}/*"; 
+            use = [ "play" "reveal" ]; 
           }
-
-          # Default fallback (keep this at the bottom of the rules list)
+          # Archive
           { 
-            name = "*"; 
+            mime = "application/{ziprar7z*targzipxzzstdbzip*lzmacompressarchivecpioarjxarms-cab*}"; 
+            use = [ "extract" "reveal" ]; 
+          }
+          # JSON
+          { 
+            mime = "application/{jsonndjson}"; 
+            use = [ "edit" "reveal" ]; 
+          }
+          { 
+            mime = "*/javascript"; 
+            use = [ "edit" "reveal" ]; 
+          }
+          # Empty file
+          { 
+            mime = "inode/empty"; 
+            use = [ "edit" "reveal" ]; 
+          }
+          # Virtual file system
+          { 
+            mime = "vfs/{absentstale}"; 
+            use = "download"; 
+          }
+          # Fallback
+          { 
+            url = "*"; 
             use = [ "open" "reveal" ]; 
           }
-];
+        ];
       };
 
       tasks = {
