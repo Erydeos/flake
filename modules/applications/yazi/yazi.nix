@@ -36,6 +36,10 @@
       };
 
       opener = {
+        codium = [{ 
+          run = ''codium "$@"'';
+          detach = true; 
+          desc = "VSCodium"; }];
         edit = [
           { 
             run = "${EDITOR:-vi} %s"; 
@@ -191,56 +195,29 @@
 
       open = {
         rules = [
-          # Folder
-          { 
-            url = "*/"; 
-            use = [ "edit" "open" "reveal" ]; 
-          }
-          # Text
+    # Open all text files and JSONs with VSCodium
           { 
             mime = "text/*"; 
-            use = [ "edit" "reveal" ]; 
+            use = "codium"; 
           }
-          # Image
+
           { 
-            mime = "image/*"; 
-            use = [ "open" "reveal" ];
+            mime = "application/json"; 
+            use = "codium"; 
           }
-          # Media
+
+          # Open specific extensions like .py or .js
           { 
-            mime = "{audiovideo}/*"; 
-            use = [ "play" "reveal" ]; 
+            name = "*.{py,js,ts,md,toml,yaml}"; 
+            use = "codium"; 
           }
-          # Archive
+
+          # Default fallback (keep this at the bottom of the rules list)
           { 
-            mime = "application/{ziprar7z*targzipxzzstdbzip*lzmacompressarchivecpioarjxarms-cab*}"; 
-            use = [ "extract" "reveal" ]; 
-          }
-          # JSON
-          { 
-            mime = "application/{jsonndjson}"; 
-            use = [ "edit" "reveal" ]; 
-          }
-          { 
-            mime = "*/javascript"; 
-            use = [ "edit" "reveal" ]; 
-          }
-          # Empty file
-          { 
-            mime = "inode/empty"; 
-            use = [ "edit" "reveal" ]; 
-          }
-          # Virtual file system
-          { 
-            mime = "vfs/{absentstale}"; 
-            use = "download"; 
-          }
-          # Fallback
-          { 
-            url = "*"; 
+            name = "*"; 
             use = [ "open" "reveal" ]; 
           }
-        ];
+];
       };
 
       tasks = {
