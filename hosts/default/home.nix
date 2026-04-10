@@ -11,6 +11,7 @@
     /home/elliot/nixos/modules/applications/kitty.nix
     /home/elliot/nixos/modules/quickshell/quickshell.nix
     /home/elliot/nixos/modules/applications/matugen.nix
+    /home/elliot/nixos/modules/applications/yazi/yazi.nix
 
     inputs.matugen.nixosModules.default
   ];
