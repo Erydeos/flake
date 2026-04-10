@@ -70,33 +70,31 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+
+  # Basics
 	kitty
 	vscodium
 	nemo
 	wofi
   chromium
 
-  waybar
-  ytmdesktop
+  # OS Basics
   hyprpaper
   streamcontroller
   nwg-displays
-  hyprshutdown
-  quickshell
   git
   gh
-  obsidian
-  hyprlock
-  hypridle
   linux-wallpaperengine
   inputs.linux-wallpaper-engine.packages.${pkgs.stdenv.hostPlatform.system}.default
   hyprpicker
   inputs.matugen.packages.${system}.default
   
+  # Applications
   discord
+  obsidian
+  ytmdesktop
 
+  # Utilities
   usbutils
   unzip
   unrar
@@ -104,10 +102,13 @@
   wl-clipboard
   pavucontrol
   home-manager
-
   inputs.quickshell.packages.${pkgs.system}.default
   kdePackages.qt5compat
   libsForQt5.qt5.qtmultimedia
+
+  (inputs.yazi.packages.${pkgs.system}.default.override {
+								_7zz = pkgs._7zz-rar;  # Support for RAR extraction
+							})
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

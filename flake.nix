@@ -34,6 +34,10 @@
       url = "github:/InioX/Matugen";
     };
 
+    yazi = {
+      url = "github:sxyazi/yazi";
+    };
+
   };
 
   outputs = { self, nixpkgs, ...}@inputs:
