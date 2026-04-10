@@ -17,7 +17,7 @@
       "4, monitor:DP-1, persistent:true"
       "5, monitor:DP-1, persistent:true"
       ];
-
+    
     };
   };
 
