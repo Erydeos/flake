@@ -105,10 +105,11 @@
   inputs.quickshell.packages.${pkgs.system}.default
   kdePackages.qt5compat
   libsForQt5.qt5.qtmultimedia
-
   (inputs.yazi.packages.${pkgs.system}.default.override {
 								_7zz = pkgs._7zz-rar;  # Support for RAR extraction
 							})
+  fastfetch
+
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

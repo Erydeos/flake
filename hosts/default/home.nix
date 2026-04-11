@@ -88,11 +88,16 @@
 
   programs.bash = {
     enable = true;
+
     shellAliases = {
       pf = "cd /home/elliot/nixos/ && \git add . &&\git commit -m update && \git push origin main";
       rf = "sudo nixos-rebuild switch --flake /home/elliot/nixos#default --impure";
       qs = "quickshell";
       ut = "/home/elliot/nixos/modules/scripts/wp-theme-sync.sh";
     };
+
+    initExtra = ''
+      fastfetch
+    '';
   };
 }
