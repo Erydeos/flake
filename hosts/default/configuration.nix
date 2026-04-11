@@ -109,7 +109,7 @@
 								_7zz = pkgs._7zz-rar;  # Support for RAR extraction
 							})
   fastfetch
-  btop
+  btop-cuda
 
   ];
 

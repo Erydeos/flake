@@ -108,6 +108,8 @@
     settings = {
       color_theme = "horizon";
       theme_background = false;
+      shown_boxes = "cpu mem net proc gpu0";
+      cuda_low_power_render = false;
     };
   };
 }
