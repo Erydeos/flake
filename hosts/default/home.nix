@@ -94,10 +94,20 @@
       rf = "sudo nixos-rebuild switch --flake /home/elliot/nixos#default --impure";
       qs = "quickshell";
       ut = "/home/elliot/nixos/modules/scripts/wp-theme-sync.sh";
+      gpu = "watch -n 1 nvidia-smi";
+      mt = "btop";
     };
 
     initExtra = ''
       fastfetch
     '';
+  };
+
+  programs.btop = {
+    enable = true;
+    settings = {
+      color_theme = "horizon";
+      theme_background = false;
+    };
   };
 }
