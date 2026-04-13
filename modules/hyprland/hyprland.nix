@@ -24,7 +24,12 @@
         "[workspace special:notes silent] obsidian"
 
       ];
+      input = {
+        numlock_by_default = true;
+      };
     };
+
+
   };
 
 }

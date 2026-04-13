@@ -35,6 +35,7 @@
 
         "shadow_passes" = "1";
         "shadow_size" = "1";
+        "placeholder_text" = "";
       };
 
       label = {
