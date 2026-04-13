@@ -13,6 +13,7 @@
     /home/elliot/nixos/modules/applications/matugen.nix
     /home/elliot/nixos/modules/applications/yazi/yazi.nix
     /home/elliot/nixos/modules/applications/yazi/keymap.nix
+    /home/elliot/nixos/modules/applications/yazi/plugins.nix
 
 
     inputs.matugen.nixosModules.default

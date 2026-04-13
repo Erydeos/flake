@@ -87,7 +87,8 @@
   linux-wallpaperengine
   inputs.linux-wallpaper-engine.packages.${pkgs.stdenv.hostPlatform.system}.default
   hyprpicker
-  inputs.matugen.packages.${system}.default
+  hyprshot
+  inputs.matugen.packages.${stdenv.hostPlatform.system}.default
   
   # Applications
   discord
@@ -104,15 +105,16 @@
   wl-clipboard
   pavucontrol
   home-manager
-  inputs.quickshell.packages.${pkgs.system}.default
+  inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default
   kdePackages.qt5compat
   libsForQt5.qt5.qtmultimedia
-  (inputs.yazi.packages.${pkgs.system}.default.override {
+  (inputs.yazi.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
 								_7zz = pkgs._7zz-rar;  # Support for RAR extraction
 							})
   fastfetch
   btop-cuda
-  hyprshot
+  trash-cli
+
 
   ];
 
@@ -145,7 +147,7 @@
 
 # Hyprland
 programs.hyprland.enable = true;
-programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+programs.hyprland.package = inputs.hyprland.packages."${pkgs.stdenv.hostPlatform.system}".hyprland;
 
 boot.kernelPackages = pkgs.linuxPackages_latest;
 hardware.enableRedistributableFirmware = true;
