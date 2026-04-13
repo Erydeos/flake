@@ -93,6 +93,7 @@
   discord
   obsidian
   ytmdesktop
+  pymol
 
   # Utilities
   usbutils
