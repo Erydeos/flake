@@ -110,6 +110,7 @@
 							})
   fastfetch
   btop-cuda
+  hyprshot
 
   ];
 

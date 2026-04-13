@@ -51,6 +51,8 @@
 
  "$mainMod, w, exec, linux-wallpaper-engine"
 
+ "$mainMod, print, exec, hyprshot -m region"
+
 #-------------------------------------------------------
 
 # Move focus with mainMod + arrow keys
