@@ -17,6 +17,14 @@
       "4, monitor:DP-1, persistent:true"
       "5, monitor:DP-1, persistent:true"
       ];
+
+      windowrule = [
+        {
+        "name" = "suppress-maximize-events";
+        "match:class" = ".*";
+        "suppress_event" = "maximize";
+        }
+      ];
     
     };
   };
