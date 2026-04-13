@@ -51,7 +51,7 @@
 
  "$mainMod, w, exec, linux-wallpaper-engine"
 
- "$mainMod, print, exec, hyprshot -m region"
+ "$mainMod, print, exec, hyprshot -m region -o /home/elliot/images/screenshots"
 
 #-------------------------------------------------------
 
