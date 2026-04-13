@@ -98,6 +98,7 @@
   # Utilities
   usbutils
   unzip
+  p7zip
   unrar
   pciutils
   wl-clipboard
