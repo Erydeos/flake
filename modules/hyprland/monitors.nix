@@ -24,6 +24,12 @@
         "match:class" = ".*";
         "suppress_event" = "maximize";
         }
+
+        {
+          "name" = "krita";
+          "match:class" = "^(krita)$";
+          "monitor" = "DP-2";
+        }
       ];
     
     };

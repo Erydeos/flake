@@ -96,6 +96,7 @@
   obsidian
   ytmdesktop
   pymol
+  krita
 
   # Utilities
   usbutils
