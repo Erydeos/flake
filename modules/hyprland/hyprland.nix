@@ -22,14 +22,15 @@
         "sleep 2 && quickshell"
         "[workspace special:music silent] ytmdesktop --password-store='gnome-libsecret' --no-sandbox &"
         "[workspace special:notes silent] obsidian"
+        "otd-daemon"
 
       ];
       input = {
         numlock_by_default = true;
+        tablet = {
+          output = "DP-2";
+        };
       };
     };
-
-
   };
-
 }

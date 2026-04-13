@@ -89,6 +89,7 @@
   hyprpicker
   hyprshot
   inputs.matugen.packages.${stdenv.hostPlatform.system}.default
+  hyprshutdown
   
   # Applications
   discord
@@ -204,5 +205,8 @@ programs.gamescope.enable = true;
 hardware.bluetooth.enable = true;
 services.blueman.enable = true;
 
+hardware.opentabletdriver.enable = true;
+hardware.uinput.enable = true;
 
+boot.blacklistedKernelModules = [ "hid-uclogic" "wacom" ];
 }
