@@ -3,7 +3,7 @@
 {
   xdg.configFile."matugen/config.toml".text = ''
     [config]
-    fallback_color = "#121212"
+    fallback_color = "#6200ff"
     json_format = "hex"
 
 
