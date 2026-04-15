@@ -7,44 +7,9 @@ import Quickshell.Io
 import Quickshell.Services.SystemTray
 
 
+
 ShellRoot {
-  Scope {
-    id: root
+  Bar {}
 
-    Time { id: timeSource }
-
-    Theme {}
-
-    PanelWindow {
-      id: bar
-
-      surfaceFormat {
-        opaque: false
-      }
-
-      anchors {
-        top: true
-        right: true
-        left: true
-      }
-
-      readonly property int height: 34
-      readonly property int spacer: 5
-
-      implicitHeight: height
-
-      margins {
-        bottom: 5
-      }
-
-      color: "transparent"
-
-      Audio {}
-      Systemtray {}
-      Workspaces {}
-      Clock {
-        time: timeSource.time
-      }
-    }
-  }
+  //Curve {}
 }

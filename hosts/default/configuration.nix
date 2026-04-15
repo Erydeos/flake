@@ -97,6 +97,7 @@
   ytmdesktop
   pymol
   krita
+  zoom-us
 
   # Utilities
   usbutils
