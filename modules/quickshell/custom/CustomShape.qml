@@ -13,10 +13,6 @@ Shape {
         samples: 4
     }
 
-    anchors {
-        fill: parent
-    }
-
         ShapePath {
         strokeWidth: 2
         strokeColor: "transparent"

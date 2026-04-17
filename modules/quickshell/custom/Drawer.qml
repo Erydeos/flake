@@ -4,7 +4,7 @@ import QtQuick.Layouts
 import qs.theme
 import QtQuick.Controls
 
-Rectangle {
+ Rectangle {
     id: rootWindow
 
     anchors {
@@ -44,7 +44,7 @@ Rectangle {
         }
 
         contentItem: Item {
-            Shape {}
+            CustomShape {}
 
             ColumnLayout {
 
