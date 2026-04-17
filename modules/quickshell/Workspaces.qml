@@ -38,6 +38,7 @@
           color: {
             if (isActive) return Colors.ac
             if (mouseArea.containsMouse) return Colors.ac
+            if (ws) return Colors.sec
             return "transparent"
           }
 

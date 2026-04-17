@@ -174,7 +174,11 @@ hardware.graphics = {
 };
 
 services.xserver.videoDrivers = [ "nvidia" ];
-hardware.nvidia.open = true;  # see the note above
+hardware.nvidia = {
+  open = true;  # see the note above
+  package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+  #package = config.boot.kernelPackages.nvidiaPackages.stable;
+};
 
 # Secure Storage for ytmdesktop
 services.gnome.gnome-keyring.enable = true;
