@@ -215,4 +215,8 @@ hardware.opentabletdriver.enable = true;
 hardware.uinput.enable = true;
 
 boot.blacklistedKernelModules = [ "hid-uclogic" "wacom" ];
+
+
+# OR if you prefer the classic governor approach:
+powerManagement.cpuFreqGovernor = "performance";
 }

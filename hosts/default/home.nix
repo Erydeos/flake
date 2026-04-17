@@ -81,7 +81,7 @@
   #  /etc/profiles/per-user/elliot/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+
   };
 
   # Let Home Manager install and manage itself.
@@ -112,5 +112,9 @@
       shown_boxes = "cpu mem net proc gpu0";
       cuda_low_power_render = false;
     };
+  };
+
+  services.linux-wallpaperengine = {
+    enable = true;
   };
 }
