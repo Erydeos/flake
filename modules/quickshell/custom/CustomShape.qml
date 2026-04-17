@@ -5,6 +5,8 @@ import QtQuick.Shapes
 import qs.theme
 
 Shape {
+
+    property color color: Colors.menu
     width: parent.width
     height: parent.height
 
@@ -16,7 +18,7 @@ Shape {
         ShapePath {
         strokeWidth: 2
         strokeColor: "transparent"
-        fillColor: Colors.bg
+        fillColor: color
 
 
         startX: 0

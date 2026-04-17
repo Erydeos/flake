@@ -15,4 +15,5 @@ Singleton {
     property color text: Qt.alpha(Matugen.text, 0.9)
     property color ac: Qt.alpha(Matugen.primary, 0.6)
     property color sec: Qt.alpha(Matugen.primary, 0.2)
+    property color menu: Qt.alpha(Matugen.background, 0.9)
 }
