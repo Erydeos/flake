@@ -7,6 +7,7 @@ import Quickshell.Io
 import Quickshell.Services.SystemTray
 import QtQuick.Shapes
 import qs.theme
+import qs.custom
 
 
 
@@ -23,6 +24,9 @@ Scope {
         surfaceFormat {
             opaque: false
         }
+
+        WlrLayershell.layer: WlrLayer.Top
+        exclusiveZone: 0 
 
         anchors {
             top: true

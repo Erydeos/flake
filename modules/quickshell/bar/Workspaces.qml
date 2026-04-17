@@ -7,7 +7,10 @@
 
 
   Rectangle {
-    anchors.centerIn: parent
+    anchors {
+      top: parent.top
+      horizontalCenter: parent.horizontalCenter
+    }
     implicitHeight: bar.height
     implicitWidth: row.width
 

@@ -18,7 +18,7 @@ ShellRoot {
   property color ac: Colors.ac
   property color sec: Color.sec */
 
-  Bar {}
+  //Bar {}
 
-  //Drawer {}
+  Window {}
 }
