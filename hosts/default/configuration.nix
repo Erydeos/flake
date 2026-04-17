@@ -176,8 +176,8 @@ hardware.graphics = {
 services.xserver.videoDrivers = [ "nvidia" ];
 hardware.nvidia = {
   open = true;  # see the note above
-  package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
-  #package = config.boot.kernelPackages.nvidiaPackages.stable;
+  #package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+  package = config.boot.kernelPackages.nvidiaPackages.stable;
 };
 
 # Secure Storage for ytmdesktop
@@ -217,6 +217,6 @@ hardware.uinput.enable = true;
 boot.blacklistedKernelModules = [ "hid-uclogic" "wacom" ];
 
 
-# OR if you prefer the classic governor approach:
-powerManagement.cpuFreqGovernor = "performance";
+# OR if you prefer the classic governor approach for laggy wallpaper engine:
+#powerManagement.cpuFreqGovernor = "performance";
 }

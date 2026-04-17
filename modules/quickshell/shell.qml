@@ -7,6 +7,7 @@ import Quickshell.Io
 import Quickshell.Services.SystemTray
 import qs.bar
 import qs.theme
+import qs.custom
 
 
 
@@ -19,5 +20,5 @@ ShellRoot {
 
   Bar {}
 
-  //Curve {}
+  Drawer {}
 }
