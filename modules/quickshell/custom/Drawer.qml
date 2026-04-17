@@ -44,40 +44,43 @@ import QtQuick.Controls
         }
 
         contentItem: Item {
-            CustomShape {}
 
-            ColumnLayout {
+            CustomShape { id: backgroundShape }
+
+            GridLayout {
+                columns: 2
+                rows: 2
+
+                columnSpacing: 5
+                rowSpacing: 5
 
                 anchors {
-                    fill: parent
-                    leftMargin: 20
-                    rightMargin: 20
+                    fill: backgroundShape
                 }
-
-                spacing: 20
-
-                Text {
-                    text: "Testing"
-                    color: Colors.text
-                    font.bold: true
-                    Layout.alignment: Qt.AlignHCenter
-                }
+                
+                width: backgroundShape.width * 0.8
+                Layout.fillWidth: true
+                Layout.fillHeight: true
 
                 Rectangle {
-                    Layout.preferredWidth: parent.width * 0.8
-                    Layout.alignment: Qt.AlignHCenter
-                    height: 40
-                    color: Colors.sec
-                    
-                }
-            
-                MouseArea {
-                    anchors.fill: parent
+                    Layout.column: 0
+                    Layout.row: 0
 
-                    onClicked: {
-                        rightDrawer.close();
-                        rootWindow.drawerHeight = bar.height;
-                    }
+                    Layout.preferredWidth: 50
+                    Layout.preferredHeight: 50
+
+                    radius: 5
+                    color: "blue"
+                }
+        
+            }
+
+            MouseArea {
+                anchors.fill: parent
+
+                onClicked: {
+                    rightDrawer.close();
+                    rootWindow.drawerHeight = bar.height;
                 }
             }
         }
