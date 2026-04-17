@@ -26,7 +26,7 @@ Scope {
             left: true
         }
 
-        WlrLayershell.layer: WlrLayer.Overlay
+        WlrLayershell.layer: WlrLayer.Top
         color: "transparent"
         surfaceFormat.opaque: false
         exclusiveZone: 0 
