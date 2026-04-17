@@ -6,7 +6,7 @@ import Quickshell.Hyprland
 import Quickshell.Io
 import Quickshell.Services.SystemTray
 import QtQuick.Shapes
-
+import qs.theme
 
 
 
@@ -21,13 +21,13 @@ Scope {
         id: bar
 
         surfaceFormat {
-        opaque: false
+            opaque: false
         }
 
         anchors {
-        top: true
-        right: true
-        left: true
+            top: true
+            right: true
+            left: true
         }
 
         readonly property int height: 34
@@ -36,7 +36,7 @@ Scope {
         implicitHeight: height
 
         margins {
-        bottom: 5
+            bottom: 5
         }
 
         color: "transparent"

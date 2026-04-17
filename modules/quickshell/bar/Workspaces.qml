@@ -3,14 +3,18 @@
   import Quickshell
   import Quickshell.Wayland
   import Quickshell.Hyprland
+  import qs.theme
+
 
   Rectangle {
     anchors.centerIn: parent
     implicitHeight: bar.height
     implicitWidth: row.width
+
+    property int r: 20 
     
     color: Colors.bg
-    radius: 20
+    radius: r
 
 
     RowLayout {
@@ -30,7 +34,7 @@
             return "35"
           }
 
-          radius: 25
+          radius: r
 
           property var ws: Hyprland.workspaces.values.find(w => w.id === index + 1)
           property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
@@ -80,7 +84,7 @@
           implicitHeight: parent.height
           implicitWidth: 70
 
-          radius: 25
+          radius: r
 
           readonly property bool isActive: Hyprland.focusedWorkspace?.id === ws.id
 

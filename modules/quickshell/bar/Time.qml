@@ -1,6 +1,8 @@
 import Quickshell
 import Quickshell.Io
 import QtQuick
+import qs.theme
+
 
 Scope {
     id: timeRoot

@@ -16,8 +16,8 @@ PREVIEW_PATH_2="$WORKSHOP_DIR/$WP_ID/preview.jpg"
 if [ -f "$PREVIEW_PATH_1" ]; then
     echo "Updating theme with preview for ID: $WP_ID"
     matugen -v image "$PREVIEW_PATH_1" --prefer=lightness
-    if ! cmp -s /home/elliot/.config/matugen/templates/colors_new.qml /home/elliot/nixos/modules/quickshell/Matugen.qml; then \
-            mv /home/elliot/.config/matugen/templates/colors_new.qml /home/elliot/nixos/modules/quickshell/Matugen.qml && exit 0; \
+    if ! cmp -s /home/elliot/.config/matugen/templates/colors_new.qml /home/elliot/nixos/modules/quickshell/theme/Matugen.qml; then \
+            mv /home/elliot/.config/matugen/templates/colors_new.qml /home/elliot/nixos/modules/quickshell/theme/Matugen.qml && exit 0; \
             else \
             exit 1; \
             fi
@@ -25,8 +25,8 @@ if [ -f "$PREVIEW_PATH_1" ]; then
 elif [ -f "$PREVIEW_PATH_2" ]; then
     echo "Updating theme with preview for ID: $WP_ID"
     matugen -v image "$PREVIEW_PATH_2" --prefer=lightness
-    if ! cmp -s /home/elliot/.config/matugen/templates/colors_new.qml /home/elliot/nixos/modules/quickshell/Matugen.qml; then \
-        mv /home/elliot/.config/matugen/templates/colors_new.qml /home/elliot/nixos/modules/quickshell/Matugen.qml && exit 0; \
+    if ! cmp -s /home/elliot/.config/matugen/templates/colors_new.qml /home/elliot/nixos/modules/quickshell/theme/Matugen.qml; then \
+        mv /home/elliot/.config/matugen/templates/colors_new.qml /home/elliot/nixos/modules/quickshell/theme/Matugen.qml && exit 0; \
         else \
         exit 1; \
         fi

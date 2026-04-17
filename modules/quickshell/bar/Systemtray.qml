@@ -2,6 +2,8 @@
   import QtQuick.Layouts
   import Quickshell
   import Quickshell.Services.SystemTray
+  import qs.theme
+
 
 Rectangle {
   anchors {
