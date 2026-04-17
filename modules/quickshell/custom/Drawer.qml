@@ -3,9 +3,13 @@ import QtQuick
 import QtQuick.Layouts
 import qs.theme
 import QtQuick.Controls
+import Quickshell.Io
+
 
  Rectangle {
     id: rootWindow
+
+    Cpu { id: cpu }
 
     anchors {
         right: parent.right
@@ -48,23 +52,36 @@ import QtQuick.Controls
             CustomShape { id: backgroundShape }
 
             GridLayout {
-                columns: 2
-                rows: 2
+                columns: 4
+                rows: 4
 
                 columnSpacing: 5
                 rowSpacing: 5
 
                 anchors {
-                    fill: backgroundShape
+                    centerIn: parent
                 }
-                
-                width: backgroundShape.width * 0.8
-                Layout.fillWidth: true
-                Layout.fillHeight: true
 
                 Rectangle {
                     Layout.column: 0
                     Layout.row: 0
+
+                    Layout.preferredWidth: 100
+                    Layout.preferredHeight: 100
+
+                    radius: 5
+                    color: Colors.ac
+
+                    Text {
+                        anchors.centerIn: parent
+                        text: "CPU: " + cpu.cpuText
+                        color: "white"
+                        font.pixelSize: 16
+                    }
+                }
+                Rectangle {
+                    Layout.column: 1
+                    Layout.row: 1
 
                     Layout.preferredWidth: 50
                     Layout.preferredHeight: 50
@@ -72,6 +89,28 @@ import QtQuick.Controls
                     radius: 5
                     color: "blue"
                 }
+                Rectangle {
+                    Layout.column: 2
+                    Layout.row: 2
+
+                    Layout.preferredWidth: 50
+                    Layout.preferredHeight: 50
+
+                    radius: 5
+                    color: "blue"
+                }
+
+                Rectangle {
+                    Layout.column: 3
+                    Layout.row: 3
+
+                    Layout.preferredWidth: 50
+                    Layout.preferredHeight: 50
+
+                    radius: 5
+                    color: "blue"
+                }
+                
         
             }
 
@@ -94,4 +133,5 @@ import QtQuick.Controls
             Qt.callLater(rightDrawer.open());
         }
     }
+
 }
