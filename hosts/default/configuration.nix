@@ -177,7 +177,6 @@ services.xserver.videoDrivers = [ "nvidia" ];
 hardware.nvidia = {
   open = true;  # see the note above
   #package = config.boot.kernelPackages.nvidiaPackages.legacy_580; # windrose
-  package = config.boot.kernelPackages.nvidiaPackages.stable;
 };
 
 # Secure Storage for ytmdesktop
