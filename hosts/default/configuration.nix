@@ -117,6 +117,7 @@
   fastfetch
   btop-cuda
   trash-cli
+  htop
 
 
   ];
