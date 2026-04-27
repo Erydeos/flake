@@ -3,7 +3,9 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, inputs, ... }:
-
+let
+  azeron-linux = pkgs.callPackage /home/elliot/nixos/modules/applications/azeron.nix { };
+in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -98,6 +100,7 @@
   pymol
   krita
   zoom-us
+  azeron-linux
 
   # Utilities
   usbutils
@@ -219,4 +222,8 @@ boot.blacklistedKernelModules = [ "hid-uclogic" "wacom" ];
 
 # OR if you prefer the classic governor approach for laggy wallpaper engine:
 #powerManagement.cpuFreqGovernor = "performance";
+
+/*services.udev.extraRules = ''
+    KERNEL=="hidraw*", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5750", MODE="0666"
+  ''; */
 }
