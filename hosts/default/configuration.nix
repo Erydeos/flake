@@ -3,9 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, inputs, ... }:
-let
-  azeron-linux = pkgs.callPackage /home/elliot/nixos/modules/applications/azeron.nix { };
-in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -100,7 +97,6 @@ in
   pymol
   krita
   zoom-us
-  azeron-linux
 
   # Utilities
   usbutils
