@@ -126,7 +126,7 @@
     ];
 
     fcitx5.settings.globalOptions = {
-      "Hotkey/TriggerKeys" = {
+      "Hotkey/EnumerateForwardKeys" = {
         "0" = "Alt+space";
       };
     };
