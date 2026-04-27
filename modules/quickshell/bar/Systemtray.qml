@@ -3,6 +3,7 @@
   import Quickshell
   import Quickshell.Services.SystemTray
   import qs.theme
+  import Quickshell.Widgets
 
 
 Rectangle {
