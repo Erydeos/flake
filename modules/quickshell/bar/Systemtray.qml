@@ -4,6 +4,8 @@
   import Quickshell.Services.SystemTray
   import qs.theme
   import Quickshell.Widgets
+  import Quickshell.Io
+
 
 
 Rectangle {
@@ -43,7 +45,6 @@ Rectangle {
           fillMode: Image.PreserveAspectFit
         }
       }
-
     }
   }
 }
