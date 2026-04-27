@@ -7,8 +7,8 @@
 
     settings = {
       input = {
-    "kb_layout" = "us,se";
-    "kb_options" = grp:alt_space_toggle;
+    #"kb_layout" = "us,se";
+    #"kb_options" = grp:alt_space_toggle;
 
     "follow_mouse" = 1;
 

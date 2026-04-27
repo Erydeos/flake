@@ -117,4 +117,31 @@
   services.linux-wallpaperengine = {
     enable = true;
   };
+
+  i18n.inputMethod = {
+    enabled = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-mozc
+      fcitx5-gtk
+    ];
+
+    fcitx5.settings.globalOptions = {
+      "Hotkey/TriggerKeys" = {
+        "0" = "Alt+space";
+      };
+    };
+
+    fcitx5.settings.inputMethod = {
+      "Groups/0" = {
+        Name = "Default";
+        "Default Layout" = "us";
+        DefaultIM = "keyboard-us";
+      };
+
+      "Groups/0/Items/0".Name = "keyboard-us";
+      "Groups/0/Items/1".Name = "keyboard-se";
+      "Groups/0/Items/2".Name = "mozc";
+    };
+  };
+
 }
