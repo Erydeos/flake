@@ -16,9 +16,9 @@ ShellRoot {
   /*property color bg: Colors.bg
   property color text: Color.text
   property color ac: Colors.ac
-  property color sec: Color.sec */
+  property color sec: Color.sec */ 
 
-  //Bar {}
+  //Bar {} test
 
   Window {}
 }
