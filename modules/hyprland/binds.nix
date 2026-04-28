@@ -55,6 +55,8 @@
 
  "$mainMod, print, exec, hyprshot -m region -o /home/elliot/images/screenshots"
 
+ "$mainMod, b, exec, winboat --network=host"
+
 #-------------------------------------------------------
 
 # Move focus with mainMod + arrow keys

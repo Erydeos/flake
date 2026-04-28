@@ -52,7 +52,7 @@
   users.users.elliot = {
     isNormalUser = true;
     description = "elliot";
-    extraGroups = [ "networkmanager" "wheel" "audio"];
+    extraGroups = [ "networkmanager" "wheel" "audio" "docker"];
     packages = with pkgs; [];
   };
 
@@ -117,6 +117,8 @@
   btop-cuda
   trash-cli
   htop
+
+  winboat
 
 
   ];
@@ -216,10 +218,5 @@ hardware.uinput.enable = true;
 boot.blacklistedKernelModules = [ "hid-uclogic" "wacom" ];
 
 
-# OR if you prefer the classic governor approach for laggy wallpaper engine:
-#powerManagement.cpuFreqGovernor = "performance";
-
-/*services.udev.extraRules = ''
-    KERNEL=="hidraw*", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5750", MODE="0666"
-  ''; */
+virtualisation.docker.enable = true;
 }
