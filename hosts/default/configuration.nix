@@ -220,6 +220,7 @@ boot.blacklistedKernelModules = [ "hid-uclogic" "wacom" ];
 
 virtualisation.docker.enable = true;
 
+# allows tablet to winboat passthrough
 services.udev.extraRules = ''
   # Replace '056a' with your tablet's vendor ID from `lsusb`
   KERNEL=="hidraw*", ATTRS{idVendor}=="256c", MODE="0666"
