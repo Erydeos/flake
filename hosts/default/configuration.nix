@@ -52,7 +52,7 @@
   users.users.elliot = {
     isNormalUser = true;
     description = "elliot";
-    extraGroups = [ "networkmanager" "wheel" "audio" "docker"];
+    extraGroups = [ "networkmanager" "wheel" "audio" "docker" "dialout"];
     packages = with pkgs; [];
   };
 
@@ -117,6 +117,7 @@
   btop-cuda
   trash-cli
   htop
+  gparted
 
   winboat
 
@@ -178,7 +179,7 @@ hardware.graphics = {
 services.xserver.videoDrivers = [ "nvidia" ];
 hardware.nvidia = {
   open = true;  # see the note above
-  #package = config.boot.kernelPackages.nvidiaPackages.legacy_580; # windrose
+  package = config.boot.kernelPackages.nvidiaPackages.legacy_580; # windrose
 };
 
 # Secure Storage for ytmdesktop
@@ -215,7 +216,7 @@ services.blueman.enable = true;
 hardware.opentabletdriver.enable = true;
 hardware.uinput.enable = true;
 
-boot.blacklistedKernelModules = [ "hid-uclogic" "wacom" ];
+boot.blacklistedKernelModules = [ "hid-uclogic" "wacom"];
 
 
 virtualisation.docker.enable = true;
@@ -225,6 +226,15 @@ services.udev.extraRules = ''
   # Replace '056a' with your tablet's vendor ID from `lsusb`
   KERNEL=="hidraw*", ATTRS{idVendor}=="256c", MODE="0666"
 
-  KERNEL=="hidraw*", ATTRS{idVendor}=="16d0", MODE="0666"
+  KERNEL=="hidraw*", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="12f7", MODE="0666"
+  SUBSYSTEMS=="usb", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="12f7", TAG+="uaccess"
+  KERNEL=="ttyACM*", ATTRS{idVendor}=="16d0", ATTRS{idProduct}=="12f7", MODE="0660", GROUP="dialout", TAG+="uaccess"
+
 '';
+
+boot.kernelParams = [ 
+  "usbcore.autosuspend=-1" 
+  "usbhid.quirks=0x16d0:0x12f7:0x040" # Replace with your specific ID if different
+];
+
 }
