@@ -97,6 +97,7 @@
       ut = "/home/elliot/nixos/modules/scripts/wp-theme-sync.sh";
       gpu = "watch -n 1 nvidia-smi";
       mt = "btop";
+      rb = "sudo reboot now";
     };
 
     initExtra = ''

@@ -179,7 +179,7 @@ hardware.graphics = {
 services.xserver.videoDrivers = [ "nvidia" ];
 hardware.nvidia = {
   open = true;  # see the note above
-  package = config.boot.kernelPackages.nvidiaPackages.legacy_580; # windrose
+  #package = config.boot.kernelPackages.nvidiaPackages.legacy_580; # windrose
 };
 
 # Secure Storage for ytmdesktop
@@ -236,5 +236,11 @@ boot.kernelParams = [
   "usbcore.autosuspend=-1" 
   "usbhid.quirks=0x16d0:0x12f7:0x040" # Replace with your specific ID if different
 ];
+
+fileSystems."/F" = {
+  device = "/dev/disk/by-uuid/ac948181-d9a6-4dd0-85ca-2b481f0c0a27";
+  fsType = "ext4";
+  options = [ "defaults" "nofail"];
+};
 
 }
