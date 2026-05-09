@@ -1,0 +1,4 @@
+module theme
+Colors 1.0 Colors.qml
+Matugen 1.0 Matugen.qml
+Theme 1.0 Theme.qml

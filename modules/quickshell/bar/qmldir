@@ -1,0 +1,7 @@
+module bar
+Audio 1.0 Audio.qml
+Bar 1.0 Bar.qml
+Clock 1.0 Clock.qml
+Systemtray 1.0 Systemtray.qml
+Time 1.0 Time.qml
+Workspaces 1.0 Workspaces.qml

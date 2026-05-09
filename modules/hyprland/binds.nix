@@ -44,7 +44,7 @@
  "$mainMod, b, exec, /home/elliot/.config/waybar/scripts/launch.sh"
  "$mainMod, l, exec, hyprlock"
 
- "$mainMod, u, exec, pgrep quickshell >/dev/null 2>&1 && pkill -9 quickshell || quickshell"
+ "$mainMod, u, exec, pgrep quickshell >/dev/null 2>&1 && pkill -9 quickshell || quickshell --path /home/elliot/nixos/modules/quickshell/shell/"
  "$mainMod SHIFT, u, exec, touch ~/.config/quickshell/shell.qml"
 
  "$mainMod, P, exec, hyprpicker -a"

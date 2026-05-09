@@ -1,0 +1,5 @@
+module custom
+Cpu 1.0 Cpu.qml
+CustomShape 1.0 CustomShape.qml
+Drawer 1.0 Drawer.qml
+Window 1.0 Window.qml

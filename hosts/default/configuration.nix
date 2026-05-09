@@ -120,7 +120,7 @@
   gparted
 
   winboat
-
+  stremio-linux-shell
 
   ];
 
