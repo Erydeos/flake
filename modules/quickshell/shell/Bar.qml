@@ -6,8 +6,7 @@ import Quickshell.Hyprland
 import Quickshell.Io
 import Quickshell.Services.SystemTray
 import QtQuick.Shapes
-import qs.theme
-import qs.custom
+import "."
 
 
 

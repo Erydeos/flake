@@ -52,6 +52,7 @@
  "$mainMod, escape, exec, hyprshutdown"
 
  "$mainMod, w, exec, linux-wallpaper-engine"
+ "$mainMod SHIFT, w, exec, pkill -f linux-wallpaper-engine"
 
  "$mainMod, print, exec, hyprshot -m region -o /home/elliot/images/screenshots"
 

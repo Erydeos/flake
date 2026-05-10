@@ -160,4 +160,5 @@
   # This forces Home Manager to overwrite existing mimeapps.list files
   # which prevents Discord from re-asserting itself.
   xdg.configFile."mimeapps.list".force = true; 
+
 }
