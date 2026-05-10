@@ -19,7 +19,7 @@
 
         "sleep 1 && xrandr --output DP-1 --primary"
         "hyprctl dispatch workspace 1"
-        "sleep 2 && quickshell --path /home/elliot/nixos/modules/quickshell/shell/"
+        "sleep 2 && quickshell"
         "[workspace special:music silent] ytmdesktop --password-store='gnome-libsecret' --no-sandbox &"
         "[workspace special:notes silent] obsidian"
         "otd-daemon"
