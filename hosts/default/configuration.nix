@@ -97,6 +97,8 @@
   pymol
   krita
   zoom-us
+  protonplus
+  heroic
 
   # Utilities
   usbutils
