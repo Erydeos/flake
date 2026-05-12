@@ -36,7 +36,7 @@
 
 # --------------------------------------------------------
  "$mainMod, t, exec, codium"
- "$mainMod, h, exec, codium /home/elliot/nixos/modules/hyprland"
+ "$mainMod, h, exec, heroic"
  "$mainMod, o, exec, codium /home/elliot/nixos/"
  "$mainMod, f, exec, chromium --enable-features=UseOzonePlatform --ozone-platform=wayland"
  "$mainMod, y, exec, ytmdesktop --password-store='gnome-libsecret' --no-sandbox &"
