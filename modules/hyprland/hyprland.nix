@@ -7,8 +7,8 @@
     ./monitors.nix
     ./hyprpaper.nix
     ./decoration.nix
-    ./hyprlock.nix
-    ./hypridle.nix
+    #./hyprlock.nix
+    #./hypridle.nix
   ];
 
   wayland.windowManager.hyprland = {
