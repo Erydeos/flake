@@ -180,7 +180,7 @@ hardware.graphics = {
 services.xserver.videoDrivers = [ "nvidia" ];
 hardware.nvidia = {
   open = true;  # see the note above
-  #package = config.boot.kernelPackages.nvidiaPackages.legacy_580; # windrose
+  #package = config.boot.kernelPackages.nvidiaPackages.legacy_580; # windrose + subnautica 2
 };
 
 # Secure Storage for ytmdesktop
@@ -244,5 +244,13 @@ fileSystems."/F" = {
   options = [ "defaults" "nofail"];
 };
 
+specialisation = {
+  legacy-gaming = {
+    inheritParentConfig = true;
+    configuration = {
+      hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+    };
+  };
+};
 
 }
