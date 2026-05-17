@@ -3,6 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, inputs, ... }:
+
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -218,6 +219,7 @@ hardware.opentabletdriver.enable = true;
 hardware.uinput.enable = true;
 
 boot.blacklistedKernelModules = [ "hid-uclogic" "wacom"];
+boot.kernelModules = [ "xpad" ];
 
 
 virtualisation.docker.enable = true;
@@ -252,5 +254,6 @@ specialisation = {
     };
   };
 };
+
 
 }

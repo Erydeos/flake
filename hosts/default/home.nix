@@ -98,6 +98,7 @@
       gpu = "watch -n 1 nvidia-smi";
       mt = "btop";
       rb = "sudo reboot now";
+      az = "cd /home/elliot/apps/azeron && nix-shell -p appimage-run --run 'appimage-run azeron-software-1.5.6-x86_64.AppImage'";
     };
 
     initExtra = ''
