@@ -100,6 +100,8 @@
   zoom-us
   protonplus
   heroic
+  prismlauncher
+  onlyoffice-desktopeditors
 
   # Utilities
   usbutils
