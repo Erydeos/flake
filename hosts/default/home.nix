@@ -89,6 +89,7 @@
 
   programs.bash = {
     enable = true;
+    enableCompletion = true;
 
     shellAliases = {
       pf = "cd /home/elliot/nixos/ && \git add . &&\git commit -m update && \git push origin main";
