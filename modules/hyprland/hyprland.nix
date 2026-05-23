@@ -7,7 +7,7 @@
     ./monitors.nix
     ./hyprpaper.nix
     ./decoration.nix
-    #./hyprlock.nix
+    ./hyprlock.nix
     #./hypridle.nix
   ];
 
@@ -23,6 +23,7 @@
         "[workspace special:music silent] ytmdesktop --password-store='gnome-libsecret' --no-sandbox &"
         "[workspace special:notes silent] obsidian"
         "otd-daemon"
+        "hyprlock"
 
       ];
       input = {

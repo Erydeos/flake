@@ -102,6 +102,8 @@
   heroic
   prismlauncher
   onlyoffice-desktopeditors
+  megacmd
+  
 
   # Utilities
   usbutils
@@ -257,5 +259,11 @@ specialisation = {
   };
 };
 
+services.getty.autologinUser = "elliot";
 
+environment.loginShellInit = ''
+  if [ "$(tty)" = "/dev/tty1" ]; then
+    exec start-hyprland
+  fi
+'';
 }
