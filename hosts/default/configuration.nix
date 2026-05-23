@@ -125,6 +125,7 @@
   trash-cli
   htop
   gparted
+  starship
 
   winboat
 

@@ -42,4 +42,8 @@
       include ./colors.conf
     '';
   };
+
+  programs.starship = {
+    enable = true;
+  };
 }
