@@ -38,6 +38,8 @@
       url = "github:sxyazi/yazi";
     };
 
+    nix-alien.url = "github:thiagokokada/nix-alien";
+
   };
 
   outputs = { self, nixpkgs, ...}@inputs:

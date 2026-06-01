@@ -102,6 +102,7 @@
   heroic
   prismlauncher
   onlyoffice-desktopeditors
+  libreoffice-qt6-fresh
   megacmd
   
 
@@ -128,8 +129,11 @@
   starship
 
   winboat
+  inputs.nix-alien.packages.${pkgs.stdenv.hostPlatform.system}.nix-alien
+  steam-run
 
   ];
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -207,6 +211,8 @@ fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono # A popular choice for powerline icons
   ];
 
+fonts.fontDir.enable = true;
+
 programs.steam = {
   enable = true;
   extraCompatPackages = with pkgs; [
@@ -267,4 +273,5 @@ environment.loginShellInit = ''
     exec start-hyprland
   fi
 '';
+
 }
