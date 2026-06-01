@@ -127,6 +127,7 @@
   htop
   gparted
   starship
+  file
 
   winboat
   inputs.nix-alien.packages.${pkgs.stdenv.hostPlatform.system}.nix-alien

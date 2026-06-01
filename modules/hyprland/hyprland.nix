@@ -16,7 +16,6 @@
 
     settings = {
       exec-once = [
-
         "sleep 1 && xrandr --output DP-1 --primary"
         "hyprctl dispatch workspace 1"
         "sleep 2 && quickshell"
