@@ -97,7 +97,7 @@
       qs = "quickshell";
       ut = "/home/elliot/nixos/modules/scripts/wp-theme-sync.sh";
       gpu = "watch -n 1 nvidia-smi";
-      mt = "btop";
+      mt = "LD_LIBRARY_PATH=/run/opengl-driver/lib:$LD_LIBRARY_PATH btop";
       rb = "sudo reboot now";
       az = "cd /home/elliot/apps/azeron && nix-shell -p appimage-run --run 'appimage-run azeron-software-1.5.6-x86_64.AppImage'";
       cl = "clear";
