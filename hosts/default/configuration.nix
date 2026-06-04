@@ -104,6 +104,7 @@
   onlyoffice-desktopeditors
   libreoffice-qt6-fresh
   megacmd
+  seanime
   
 
   # Utilities
@@ -128,6 +129,10 @@
   gparted
   starship
   file
+  appimage-run
+  mpv
+  ffmpeg
+  qbittorrent
 
   winboat
   inputs.nix-alien.packages.${pkgs.stdenv.hostPlatform.system}.nix-alien
