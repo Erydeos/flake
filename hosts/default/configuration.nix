@@ -104,7 +104,6 @@
   onlyoffice-desktopeditors
   libreoffice-qt6-fresh
   megacmd
-  seanime
   
 
   # Utilities

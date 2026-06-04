@@ -101,6 +101,7 @@
       rb = "sudo reboot now";
       az = "cd /home/elliot/apps/azeron && nix-shell -p appimage-run --run 'appimage-run azeron-software-1.5.6-x86_64.AppImage'";
       cl = "clear";
+      seanime = "appimage-run /home/elliot/seanime/seanime-denshi-3.8.3_Linux_x86_64.AppImage";
     };
 
     initExtra = ''
