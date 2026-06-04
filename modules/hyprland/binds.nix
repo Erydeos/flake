@@ -57,7 +57,7 @@
  "$mainMod, print, exec, hyprshot -m region -o /home/elliot/images/screenshots"
 
  "$mainMod, b, exec, winboat --network=host"
- "$mainMod, a, exec, yanime"
+ "$mainMod, a, exec, /home/elliot/seanime/launch.sh"
 
 #-------------------------------------------------------
 
