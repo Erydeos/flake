@@ -93,7 +93,7 @@
 
     shellAliases = {
       pf = "cd /home/elliot/nixos/ && \git add . &&\git commit -m update && \git push origin main";
-      rf = "sudo nixos-rebuild switch --flake /home/elliot/nixos#default --impure";
+      rf = "NIXPKGS_ALLOW_INSECURE=1 sudo --preserve-env=NIXPKGS_ALLOW_INSECURE nixos-rebuild switch --flake /home/elliot/nixos#default --impure";
       qs = "quickshell";
       ut = "/home/elliot/nixos/modules/scripts/wp-theme-sync.sh";
       gpu = "watch -n 1 nvidia-smi";
