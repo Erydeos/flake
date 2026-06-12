@@ -104,6 +104,7 @@
   onlyoffice-desktopeditors
   libreoffice-qt6-fresh
   megacmd
+  anki
   
 
   # Utilities
@@ -136,6 +137,10 @@
   winboat
   inputs.nix-alien.packages.${pkgs.stdenv.hostPlatform.system}.nix-alien
   steam-run
+
+  xclicker
+  theclicker
+  seanime
 
   ];
 
@@ -279,6 +284,9 @@ environment.loginShellInit = ''
   fi
 '';
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-39.8.10"
+  ];  
 
 
 }

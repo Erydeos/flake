@@ -40,8 +40,6 @@
 
     nix-alien.url = "github:thiagokokada/nix-alien";
 
-    hermes-agent.url = "github:NousResearch/hermes-agent";
-
   };
 
   outputs = { self, nixpkgs, ...}@inputs:
@@ -56,7 +54,7 @@
         modules = [
           ./hosts/default/configuration.nix
           inputs.home-manager.nixosModules.default
-          inputs.hermes-agent.nixosModules.default
+
         ];
       };
     };
