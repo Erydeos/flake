@@ -30,6 +30,12 @@
           "match:class" = "^(krita)$";
           "monitor" = "DP-2";
         }
+
+        {
+          "name" = "pavucontrol";
+          "match:class" = "^(pavucontrol)$";
+          "monitor" = "DP-2";
+        }
       ];
 
     };

@@ -11,7 +11,6 @@
     /home/elliot/nixos/modules/applications/kitty.nix
     /home/elliot/nixos/modules/quickshell/quickshell.nix
     /home/elliot/nixos/modules/applications/matugen.nix
-    /home/elliot/nixos/modules/applications/yazi/yazi.nix
     /home/elliot/nixos/modules/applications/yazi/keymap.nix
     /home/elliot/nixos/modules/applications/yazi/plugins.nix
 
@@ -101,7 +100,7 @@
       rb = "sudo reboot now";
       az = "cd /home/elliot/apps/azeron && nix-shell -p appimage-run --run 'appimage-run azeron-software-1.5.6-x86_64.AppImage'";
       cl = "clear";
-      seanime = "appimage-run /home/elliot/seanime/seanime-denshi-3.8.6_Linux_x86_64.AppImage";
+      seanime = "./seanime/launch.sh";
     };
 
     initExtra = ''

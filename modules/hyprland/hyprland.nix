@@ -23,6 +23,7 @@
         "[workspace special:notes silent] obsidian"
         "otd-daemon"
         "hyprlock"
+        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 
       ];
       input = {

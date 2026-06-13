@@ -133,14 +133,11 @@
   mpv
   ffmpeg
   qbittorrent
-
-  winboat
   inputs.nix-alien.packages.${pkgs.stdenv.hostPlatform.system}.nix-alien
   steam-run
 
   xclicker
   theclicker
-  seanime
 
   ];
 
@@ -288,5 +285,21 @@ environment.loginShellInit = ''
     "electron-39.8.10"
   ];  
 
+
+xdg.portal = {
+  enable = true;
+
+  # Makes portal selection deterministic
+  config.common.default = "hyprland";
+
+  # Hyprland + GTK is the standard minimal combo
+  extraPortals = with pkgs; [
+    xdg-desktop-portal-gtk
+    gnome-keyring
+  ];
+
+  # Important for Electron/Flatpak/Firefox reliability
+  xdgOpenUsePortal = true;
+};
 
 }
