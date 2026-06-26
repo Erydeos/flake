@@ -101,6 +101,7 @@
       az = "cd /home/elliot/apps/azeron && nix-shell -p appimage-run --run 'appimage-run azeron-software-1.5.6-x86_64.AppImage'";
       cl = "clear";
       seanime = "./seanime/launch.sh";
+      op = "cd /home/elliot/obsidian-vault/ && \git add . &&\git commit -m update && \git push origin main";
     };
 
     initExtra = ''
