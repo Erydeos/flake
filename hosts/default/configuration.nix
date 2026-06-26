@@ -264,6 +264,24 @@ fileSystems."/F" = {
   options = [ "defaults" "nofail"];
 };
 
+fileSystems."/C" = {
+  device = "/dev/disk/by-uuid/f2291b13-827e-4910-b3c3-771ffb0e6c5d";
+  fsType = "ext4";
+  options = [ "defaults" "nofail"];
+};
+
+fileSystems."/D" = {
+  device = "/dev/disk/by-uuid/082fd445-371e-4fc8-a2b2-dab3710840c4";
+  fsType = "ext4";
+  options = [ "defaults" "nofail"];
+};
+
+fileSystems."/G" = {
+  device = "/dev/disk/by-uuid/4fb869e4-5035-4f8a-b342-9e7dda1112c3";
+  fsType = "ext4";
+  options = [ "defaults" "nofail"];
+};
+
 specialisation = {
   legacy-gaming = {
     inheritParentConfig = true;

@@ -3,8 +3,8 @@ import QtQuick
 import Quickshell
 
 Singleton {
-  readonly property color background: "#191113"
-  readonly property color primary: "#ffb1c7"
-  readonly property color accent: "#e3bdc6"
-  readonly property color text: "#efdfe1"
+  readonly property color background: "#191114"
+  readonly property color primary: "#ffb0cc"
+  readonly property color accent: "#e2bdc8"
+  readonly property color text: "#eedfe2"
 }
