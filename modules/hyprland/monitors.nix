@@ -34,13 +34,16 @@
         {
           "name" = "pavucontrol";
           "match:class" = "^(pavucontrol)$";
-          "monitor" = "DP-2";
+          "monitor" = "DP-1";
         }
+
+
       ];
 
     };
 
   };
+
 
 }
 

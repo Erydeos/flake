@@ -102,6 +102,7 @@
       cl = "clear";
       seanime = "./seanime/launch.sh";
       op = "cd /home/elliot/obsidian-vault/ && \git add . &&\git commit -m update && \git push origin main";
+      twin = "❯ flatpak run app.twintaillauncher.ttl";
     };
 
     initExtra = ''

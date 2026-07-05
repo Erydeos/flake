@@ -105,6 +105,8 @@
   libreoffice-qt6-fresh
   megacmd
   anki
+  vlc
+  mpv
   
 
   # Utilities
@@ -135,6 +137,15 @@
   qbittorrent
   inputs.nix-alien.packages.${pkgs.stdenv.hostPlatform.system}.nix-alien
   steam-run
+  wget
+  gst_all_1.gstreamer
+  ocamlPackages.gstreamer
+  bottles
+  cabextract
+  wineWow64Packages.stable
+  mangohud
+  bbe
+
 
   xclicker
   theclicker
@@ -319,5 +330,8 @@ xdg.portal = {
   # Important for Electron/Flatpak/Firefox reliability
   xdgOpenUsePortal = true;
 };
+
+services.flatpak.enable = true;
+
 
 }
