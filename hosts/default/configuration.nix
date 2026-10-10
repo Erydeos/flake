@@ -114,6 +114,7 @@
 
 
   # Utilities
+  lsd
   usbutils
   unzip
   p7zip
