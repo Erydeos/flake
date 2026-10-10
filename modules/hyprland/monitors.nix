@@ -16,6 +16,9 @@
       "3, monitor:DP-1"
       "4, monitor:DP-1"
       "5, monitor:DP-1"
+      "6, monitor:DP-2"
+      "7, monitor:DP-2"
+      "8, monitor:DP-2"
       ];
 
       windowrule = [

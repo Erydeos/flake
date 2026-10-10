@@ -46,17 +46,21 @@
  "$mainMod, u, exec, pgrep quickshell >/dev/null 2>&1 && pkill -9 quickshell || quickshell"
  "$mainMod SHIFT, u, exec, touch ~/.config/quickshell/shell.qml"
 
- "$mainMod, P, exec, hyprpicker -a"
+ "$mainMod, P, exec, codium /home/elliot/C/coding/"
 
  "$mainMod, escape, exec, hyprshutdown"
 
  "$mainMod, w, exec, linux-wallpaper-engine"
- "$mainMod SHIFT, w, exec, pkill -f linux-wallpaper-engine"
+ "$mainMod SHIFT, w, exec, waytrogen"
 
  "$mainMod, print, exec, hyprshot -m region -o /home/elliot/images/screenshots"
 
  "$mainMod, a, exec, /home/elliot/seanime/launch.sh"
  "$mainMod, b, exec, hyprctl dispatch dpms toggle"
+ "$mainMod, z, exec, zeditor"
+
+ "$mainMod, j, exec, anki"
+
 
 #-------------------------------------------------------
 
@@ -105,8 +109,7 @@
   "bind = $mainMod, k, exec, hyprctl kill"
 
 # Scroll through existing workspaces with mainMod + scroll
-  "$mainMod, mouse_down, workspace, e+1"
-  "$mainMod, mouse_up, workspace, e-1"
+
 
 # Move/resize windows with mainMod + LMB/RMB and dragging
       ];

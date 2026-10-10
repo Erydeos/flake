@@ -5,7 +5,7 @@
   imports = [
     ./binds.nix
     ./monitors.nix
-    ./hyprpaper.nix
+    #./hyprpaper.nix
     ./decoration.nix
     ./hyprlock.nix
     #./hypridle.nix
@@ -24,6 +24,7 @@
         "otd-daemon"
         "hyprlock"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        "waytrogen --restore"
 
       ];
       input = {

@@ -7,7 +7,7 @@
     settings = {
       background = {
         #monitor =
-        "path" = "/home/elliot/images/hyprland-anime.png";
+        "path" = "/home/elliot/images/saved/2026-08-27-215420_hyprshot.png";
         "color" = "rgba(25, 20, 20, 1.0)";
         "blur_passes" = "1";
         "blur_size" = "1";
@@ -17,9 +17,9 @@
         #monitor = 
         "size" = "20%, 5%";
         "outline_thickness" = "3";
-        "inner_color" = "rgba(12, 12, 12, 0.1)" ;
+        "inner_color" = "rgba(0, 0, 0, 0.1)" ;
 
-        "outer_color" = "rgba(12, 12, 12, 0.8)";
+        "outer_color" = "rgba(231, 231, 231, 0.8)";
         "check_color"= "rgba(00ff99ee) rgba(ff6633ee) 120deg";
         "fail_color"= "rgba(ff6633ee) rgba(ff0066ee) 40deg";
 
@@ -41,7 +41,7 @@
       label = {
         #monitor =
         "text" = "$TIME";
-        "color" = "rgba(12, 12, 12, 0.7)";
+        "color" = "rgba(154, 154, 154, 0.7)";
         "font_size" = "100";
         "font_family" = "Noto Sans";
         "position" = "0, 110";

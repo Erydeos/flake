@@ -90,7 +90,7 @@
   hyprshot
   inputs.matugen.packages.${stdenv.hostPlatform.system}.default
   hyprshutdown
-  
+
   # Applications
   discord
   obsidian
@@ -107,7 +107,11 @@
   anki
   vlc
   mpv
-  
+  waytrogen
+  zed-editor
+  ollama-cuda
+  neovim
+
 
   # Utilities
   usbutils
@@ -145,10 +149,15 @@
   wineWow64Packages.stable
   mangohud
   bbe
+  solaar
 
+  (python3.withPackages (python-pkgs: with python-pkgs; [
+    pandas
+    numpy
+    matplotlib
+  ]))
 
   xclicker
-  theclicker
 
   ];
 
@@ -222,7 +231,7 @@ fonts.packages = with pkgs; [
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     noto-fonts-color-emoji
-    ipafont 
+    ipafont
     kochi-substitute
     font-awesome      # Standard for many Waybar configs
     nerd-fonts.symbols-only # Recommended for general icon support
@@ -264,8 +273,8 @@ services.udev.extraRules = ''
 
 '';
 
-boot.kernelParams = [ 
-  "usbcore.autosuspend=-1" 
+boot.kernelParams = [
+  "usbcore.autosuspend=-1"
   "usbhid.quirks=0x16d0:0x12f7:0x040" # Replace with your specific ID if different
 ];
 
@@ -312,7 +321,7 @@ environment.loginShellInit = ''
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-39.8.10"
-  ];  
+  ];
 
 
 xdg.portal = {
@@ -332,6 +341,19 @@ xdg.portal = {
 };
 
 services.flatpak.enable = true;
+
+environment.sessionVariables = {
+  OLLAMA_GPU         = "1";
+  OLLAMA_ENABLE_CUDA = "1";
+  PATH="PATH:/home/elliot/C/coding/worldbanc/private/bin";
+};
+
+# If you need the variables system‑wide (e.g. for a service)
+environment.variables = {
+  OLLAMA_GPU         = "1";
+  OLLAMA_ENABLE_CUDA = "1";
+  PATH="PATH:/home/elliot/C/coding/worldbanc/private/bin";
+};
 
 
 }

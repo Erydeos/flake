@@ -103,11 +103,14 @@
       seanime = "./seanime/launch.sh";
       op = "cd /home/elliot/obsidian-vault/ && \git add . &&\git commit -m update && \git push origin main";
       twin = "❯ flatpak run app.twintaillauncher.ttl";
+      kw = "pkill -f linux-wallpaperengine";
+
     };
 
     initExtra = ''
       fastfetch
     '';
+
   };
 
   programs.btop = {
@@ -123,6 +126,8 @@
   services.linux-wallpaperengine = {
     enable = true;
   };
+
+
 
   i18n.inputMethod = {
     enable = true;
