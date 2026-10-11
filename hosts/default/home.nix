@@ -83,6 +83,8 @@
 
   };
 
+  home.sessionPath = [ "$PATH:$HOME/go/bin" ];
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
@@ -104,6 +106,7 @@
       op = "cd /home/elliot/obsidian-vault/ && \git add . &&\git commit -m update && \git push origin main";
       twin = "❯ flatpak run app.twintaillauncher.ttl";
       kw = "pkill -f linux-wallpaperengine";
+      bootdev = "~/go/bin/bootdev";
 
     };
 

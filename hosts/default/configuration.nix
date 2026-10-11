@@ -114,6 +114,9 @@
 
 
   # Utilities
+  xxd
+  gcc
+  go
   lsd
   usbutils
   unzip
