@@ -111,9 +111,12 @@
   zed-editor
   ollama-cuda
   neovim
+  github-cli
 
 
   # Utilities
+  uv
+  pandoc
   xxd
   gcc
   go
@@ -159,6 +162,7 @@
     pandas
     numpy
     matplotlib
+    pygame
   ]))
 
   xclicker
@@ -357,6 +361,26 @@ environment.variables = {
   OLLAMA_GPU         = "1";
   OLLAMA_ENABLE_CUDA = "1";
   PATH="PATH:/home/elliot/C/coding/worldbanc/private/bin";
+};
+
+programs.nix-ld = {
+  enable = true;
+  libraries = with pkgs; [
+    stdenv.cc.cc.lib
+    zlib
+    libGL
+    wayland
+    libxkbcommon
+    libdecor
+    libX11
+    libXext
+    libXcursor
+    libXi
+    libXrandr
+    libXfixes
+    libXScrnSaver
+    libXxf86vm
+  ];
 };
 
 

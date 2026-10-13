@@ -107,6 +107,9 @@
       twin = "❯ flatpak run app.twintaillauncher.ttl";
       kw = "pkill -f linux-wallpaperengine";
       bootdev = "~/go/bin/bootdev";
+      zed = "zeditor";
+      ga = "git add .";
+      gc = "git commit -m";
 
     };
 
