@@ -85,7 +85,6 @@
   git
   gh
   linux-wallpaperengine
-  inputs.linux-wallpaper-engine.packages.${pkgs.stdenv.hostPlatform.system}.default
   hyprpicker
   hyprshot
   inputs.matugen.packages.${stdenv.hostPlatform.system}.default
@@ -102,14 +101,14 @@
   heroic
   prismlauncher
   onlyoffice-desktopeditors
-  libreoffice-qt6-fresh
+  libreoffice-qt
   megacmd
   anki
   vlc
   mpv
   waytrogen
   zed-editor
-  ollama-cuda
+  #ollama-cuda
   neovim
   github-cli
 
@@ -131,7 +130,7 @@
   home-manager
   inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default
   kdePackages.qt5compat
-  libsForQt5.qt5.qtmultimedia
+  qt5.qtmultimedia
   (inputs.yazi.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
 								_7zz = pkgs._7zz-rar;  # Support for RAR extraction
 							})
@@ -353,14 +352,13 @@ services.flatpak.enable = true;
 environment.sessionVariables = {
   OLLAMA_GPU         = "1";
   OLLAMA_ENABLE_CUDA = "1";
-  PATH="PATH:/home/elliot/C/coding/worldbanc/private/bin";
+  PATH=[ "/home/elliot/C/coding/worldbanc/private/bin" ];
 };
 
 # If you need the variables system‑wide (e.g. for a service)
 environment.variables = {
   OLLAMA_GPU         = "1";
   OLLAMA_ENABLE_CUDA = "1";
-  PATH="PATH:/home/elliot/C/coding/worldbanc/private/bin";
 };
 
 programs.nix-ld = {

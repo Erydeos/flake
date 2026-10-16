@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    systems-linux.url = "github:nix-systems/default-linux";
 
     hyprland.url = "github:hyprwm/Hyprland";
 
@@ -25,10 +26,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    linux-wallpaper-engine = {
-      url = "github:jagrat7/linux-wallpaper-engine";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     matugen = {
       url = "github:/InioX/Matugen";
