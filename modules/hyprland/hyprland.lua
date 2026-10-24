@@ -1,0 +1,1 @@
+/home/elliot/.config/hypr/hyprland.lua

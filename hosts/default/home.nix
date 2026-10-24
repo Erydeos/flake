@@ -5,9 +5,10 @@
   # manage.
   home.username = "elliot";
   home.homeDirectory = "/home/elliot";
-  
+
   imports = [
-    /home/elliot/nixos/modules/hyprland/hyprland.nix
+    #/home/elliot/nixos/modules/hyprland/hyprland.nix
+    /home/elliot/nixos/modules/hyprland/hyprpaper.nix
     /home/elliot/nixos/modules/applications/kitty.nix
     /home/elliot/nixos/modules/quickshell/quickshell.nix
     /home/elliot/nixos/modules/applications/matugen.nix
@@ -175,7 +176,7 @@
 
   # This forces Home Manager to overwrite existing mimeapps.list files
   # which prevents Discord from re-asserting itself.
-  xdg.configFile."mimeapps.list".force = true; 
+  xdg.configFile."mimeapps.list".force = true;
 
 
  wayland.windowManager.hyprland.configType = "hyprlang";

@@ -4,10 +4,10 @@
 {
   imports = [
     ./binds.nix
-    ./monitors.nix
-    #./hyprpaper.nix
+    #./monitors.nix
+    #
     ./decoration.nix
-    ./hyprlock.nix
+    #./hyprlock.nix
     #./hypridle.nix
   ];
 

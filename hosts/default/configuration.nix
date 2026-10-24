@@ -108,9 +108,12 @@
   mpv
   waytrogen
   zed-editor
-  #ollama-cuda
+  ollama-cuda
   neovim
   github-cli
+  godot
+  pixelorama
+
 
 
   # Utilities
@@ -381,5 +384,12 @@ programs.nix-ld = {
   ];
 };
 
+programs.appimage = {
+  enable = true;
+  binfmt = true;
+  package = pkgs.appimage-run.override {
+    extraPkgs = pkgs: [ pkgs.libayatana-appindicator ];
+  };
+};
 
 }
