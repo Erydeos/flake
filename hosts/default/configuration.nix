@@ -113,8 +113,9 @@
   github-cli
   godot
   pixelorama
-
-
+  lutris
+  aseprite
+  blender
 
   # Utilities
   uv
