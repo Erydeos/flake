@@ -5,6 +5,13 @@
 { config, pkgs, inputs, ... }:
 
 {
+
+  nixpkgs.overlays = [
+    (import ../../overlays/waypaper.nix)
+  ];
+
+
+
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
@@ -85,6 +92,7 @@
   git
   gh
   linux-wallpaperengine
+  waypaper
   hyprpicker
   hyprshot
   inputs.matugen.packages.${stdenv.hostPlatform.system}.default
@@ -116,6 +124,8 @@
   lutris
   aseprite
   blender
+  inputs.clip-studio-paint.packages.${pkgs.stdenv.hostPlatform.system}.clip-studio-paint-latest
+  inputs.zen-browser.packages."${pkgs.system}".default
 
   # Utilities
   uv
@@ -160,6 +170,8 @@
   mangohud
   bbe
   solaar
+  distrobox
+  nvidia-container-toolkit
 
   (python3.withPackages (python-pkgs: with python-pkgs; [
     pandas
@@ -169,6 +181,7 @@
   ]))
 
   xclicker
+  winboat
 
   ];
 
@@ -223,6 +236,7 @@ services.pipewire = {
 hardware.graphics = {
   enable = true;
   enable32Bit = true; # Required for Steam
+
 };
 
 services.xserver.videoDrivers = [ "nvidia" ];
@@ -392,5 +406,10 @@ programs.appimage = {
     extraPkgs = pkgs: [ pkgs.libayatana-appindicator ];
   };
 };
+
+virtualisation.podman.enable = true;
+hardware.nvidia-container-toolkit.enable = true;
+
+
 
 }

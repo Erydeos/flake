@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    systems-linux.url = "github:nix-systems/default-linux";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/26.05";
 
     hyprland.url = "github:hyprwm/Hyprland";
 
@@ -26,6 +26,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    clip-studio-paint = {
+        url = "github:h-banii/clip-studio-paint-nix";
+        inputs.nixpkgs.follows = "nixpkgs";
+        inputs.nixpkgs-stable.follows = "nixpkgs-stable";
+      };
+
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+
 
     matugen = {
       url = "github:/InioX/Matugen";
@@ -40,7 +48,7 @@
   };
 
   outputs = { self, nixpkgs, ...}@inputs:
-   let 
+   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
     in

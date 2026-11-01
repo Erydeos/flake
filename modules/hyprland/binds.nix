@@ -50,7 +50,10 @@
 
  "$mainMod, escape, exec, hyprshutdown"
 
- "$mainMod, w, exec, linux-wallpaper-engine"
+ ''$mainMod, w, exec, cd /home/elliot/linux-wallpaperengine-gui && nix shell nixpkgs#electron nixpkgs#xrandr nixpkgs#libnotify -c bash -c '
+   export ELECTRON_OVERRIDE_DIST_PATH="$(dirname "$(readlink -f "$(which electron)")")"
+   bun run dev
+ ''
  "$mainMod SHIFT, w, exec, waytrogen"
 
  "$mainMod, print, exec, hyprshot -m region -o /home/elliot/images/screenshots"
